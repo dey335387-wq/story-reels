@@ -1,0 +1,39 @@
+name: media
+on:
+  push:
+    paths: ['inbox/**']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: media
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: pip install -q edge-tts
+      - name: Process inbox
+        run: |
+          shopt -s nullglob
+          for f in inbox/*.url; do
+            n=$(basename "$f" .url)
+            curl -sSL --fail -o "media/$n.mp3" "$(head -n1 "$f")"
+            git rm -q "$f"
+          done
+          for f in inbox/*.tts; do
+            n=$(basename "$f" .tts)
+            voice=$(head -n1 "$f"); rate=$(sed -n 2p "$f")
+            tail -n +3 "$f" > /tmp/t.txt
+            edge-tts --voice "$voice" --rate="$rate" -f /tmp/t.txt \
+              --write-media "media/$n.mp3" --write-subtitles "media/$n.srt"
+            git rm -q "$f"
+          done
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898900+github-actions[bot]@users.noreply.github.com"
+          git add -A media inbox
+          git diff --cached --quiet || git commit -m "media: add generated audio"
+          git push
