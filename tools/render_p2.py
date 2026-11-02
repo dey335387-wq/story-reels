@@ -6,7 +6,8 @@ import numpy as np, cv2
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
 W, H, FPS = 1080, 1920, 30
-TEMPO = 1.10
+import os
+TEMPO = float(os.environ.get("TEMPO", "1.10"))
 FB = "/usr/share/fonts/opentype/inter/Inter-Black.otf"
 FX = "/usr/share/fonts/opentype/inter/Inter-ExtraBold.otf"
 FM = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf"
