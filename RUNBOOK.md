@@ -13,8 +13,8 @@ Owner wants 2 original Hinglish horror/suspense story Reels per day, posted auto
   git pull and re-check: if locks/<slot> now exists from the other run, STOP.
 
 ## 1. Pick the next episode
-- Continue the current series in STATE.md. "Camera 4" is a 5-part story (Parts 1-2 done).
-  Part 5 must resolve the mystery with a twist. After a series ends, start a NEW original
+- Continue the current series in STATE.md. Owner did NOT like "Camera 4" much: it is closed after
+  Part 3; do not continue it. After a series ends, start a NEW original
   series (3-5 parts), never reuse plots from other creators.
 - Each part: 25-35 sec, hook in first 2 sec, cliffhanger ending (last part: final twist).
 - Write ~8-10 Hindi (Devanagari) narration lines, each with an [emotion] tag.
@@ -35,6 +35,9 @@ Owner wants 2 original Hinglish horror/suspense story Reels per day, posted auto
   adjust the import line to your render file), then
   TEMPO=1.0 python3 render_<id>.py /tmp/<id>.wav /tmp/<id>.srt /tmp/<id>.mp4 --frames t1,t2,...
   Look at frames, fix, then full render (keep file < 95 MB).
+- Background music (REQUIRED, owner asked): python3 tools/bgm.py /tmp/<id>.wav /tmp/<id>.srt <video_sec> /tmp/<id>.m4a
+  (original synthesized suspense score: drone, heartbeat, booms on cuts, riser, ducked under voice, -14 LUFS),
+  then ffmpeg -i /tmp/<id>.mp4 -i /tmp/<id>.m4a -map 0:v -map 1:a -c:v copy -c:a copy -shortest out/<id>.mp4
 
 ## 4. Host + publish
 - Copy to out/<id>.mp4, commit, push. vidiq_video_upload(url=
