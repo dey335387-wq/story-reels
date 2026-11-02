@@ -7,6 +7,11 @@ Owner wants 2 original Hinglish horror/suspense story Reels per day, posted auto
 - Repo: dey335387-wq/story-reels (public). Clone, read STATE.md (story so far + what's next).
 - Instagram account: platformAccountId 29346910844996715 (story_xy_01) via vidIQ connector.
 
+## 0b. Lock (prevents double posting — two schedulers may fire at once)
+- Slot id = YYYY-MM-DD-am or -pm (IST). git pull; if locks/<slot> exists, STOP (another run owns it).
+- Else create locks/<slot>, commit, push. If the push is rejected (someone else pushed first),
+  git pull and re-check: if locks/<slot> now exists from the other run, STOP.
+
 ## 1. Pick the next episode
 - Continue the current series in STATE.md. "Camera 4" is a 5-part story (Parts 1-2 done).
   Part 5 must resolve the mystery with a twist. After a series ends, start a NEW original
