@@ -30,6 +30,18 @@ jobs:
               --write-media "media/$n.mp3" --write-subtitles "media/$n.srt"
             git rm -q "$f"
           done
+      - name: Gemini TTS
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          shopt -s nullglob
+          for f in inbox/*.gtts; do
+            n=$(basename "$f" .gtts)
+            if [ -z "$GEMINI_API_KEY" ]; then echo "GEMINI_API_KEY secret missing"; exit 1; fi
+            python tools/gemini_tts.py "$f" "/tmp/$n.wav"
+            ffmpeg -loglevel error -y -i "/tmp/$n.wav" -b:a 160k "media/$n.mp3"
+            git rm -q "$f"
+          done
       - name: Commit
         run: |
           git config user.name "github-actions[bot]"
