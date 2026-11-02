@@ -38,5 +38,12 @@ Owner wants 2 original Hinglish horror/suspense story Reels per day, posted auto
   caption="<Series> 🌑 part-N | <hook line> #horrorstory #hindistory #scarystories #explore #reelsgrowth"),
   continue with containerId until PUBLISHED. Never publish the same episode twice:
   check STATE.md first; if a step fails, stop and report, don't retry blindly.
+- Facebook (same video): right after the Instagram Reel is PUBLISHED, call Metricool
+  createScheduledPost with blogId 7813457, date = now + 5 min (ISO, +05:30), info JSON:
+  {"autoPublish":true,"draft":false,"descendants":[],"firstCommentText":"","hasNotReadNotes":false,
+   "shortener":false,"smartLinkData":{"ids":[]},"mediaAltText":[],"media":[<vidIQ videoUrl>],
+   "providers":[{"network":"facebook"}],"publicationDate":{"dateTime":"<same time>","timezone":"Asia/Calcutta"},
+   "text":"<caption>","facebookData":{"type":"REEL","title":"<Series> part-N"}}
+  If it errors, report it; the Instagram post still counts.
 - git rm out/<id>.mp4; update STATE.md (episode summary, permalink, date); commit + push.
 - Report the permalink to the owner.
