@@ -1,4 +1,5 @@
 # Daily News Short runbook (YouTube Shorts, owner's separate news channel)
+On-screen brand: "60 SEC KHABAR" (owner said choose any name). Put it in story.json "channel".
 
 Owner wants 1 Hinglish daily-news Short per day on their new YouTube channel (Metricool brand 7813457,
 youtubeData UCwHbpK7mj-_e857StojX76w), published at 18:30 IST, style like Indian explainer creators
