@@ -1,0 +1,6 @@
+test1_0.jpg | File:Mumbai Local Train passing.jpg | Pratishkhedekar | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File%3AMumbai_Local_Train_passing.jpg
+test1_1.jpg | File:Mumbai Suburban Railway passengers hanging off doors Mumbai India 17Aug2006.jpg | Everhard van Eimeren | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File%3AMumbai_Suburban_Railway_passengers_hanging_off_doors_Mumbai_India_17Aug2006.jpg
+test1_2.jpg | File:Mumbai Train.JPG | The original uploader was Nikkul at English Wikipedia. | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File%3AMumbai_Train.JPG
+test2_0.jpg | File:ISRO rocket launcher model.jpg | Adbh266 | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File%3AISRO_rocket_launcher_model.jpg
+test2_1.jpg | File:ISRO rockets.JPG | No machine-readable author provided. Vastu~commonswiki assumed (based on copyright claims). | Public domain | https://commons.wikimedia.org/wiki/File%3AISRO_rockets.JPG
+test2_2.jpg | File:NISAR Encapsulated in Payload Fairing at ISRO Launch Site (PIA26611).tiff | ISRO | Public domain | https://commons.wikimedia.org/wiki/File%3ANISAR_Encapsulated_in_Payload_Fairing_at_ISRO_Launch_Site_%28PIA26611%29.tiff
