@@ -1,7 +1,7 @@
 """Trim long dead air and make caption timings for a voice file without subtitles.
 python3 align.py in.mp3 out.wav out.srt  (caption texts = CAPS from render_p2.py)"""
 import sys, subprocess, numpy as np, re
-sys.path.insert(0, "/home/claude/reelkit"); from render_p3 import CAPS
+sys.path.insert(0, "/home/claude/reelkit"); from render_kc1 import CAPS
 src, wav, srt = sys.argv[1:4]
 SR = 24000
 a = np.frombuffer(subprocess.run(["ffmpeg", "-v", "error", "-i", src, "-f", "s16le", "-ac", "1", "-ar", str(SR), "-"],
