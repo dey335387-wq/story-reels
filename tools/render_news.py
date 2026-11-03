@@ -50,7 +50,7 @@ def main():
     yy = np.linspace(0, 1, IH)[:, None, None]
     grad = np.clip((yy - 0.55) / 0.45, 0, 1) ** 1.5
     fB, fK, fS, fM = font(FB, 82), font(FX, 40), font(FB, 150), font(FM, 28)
-    chan = story.get("channel", "DAILY UPDATE").upper()
+    chan = story.get("channel", "60 SEC KHABAR").upper()
 
     def shot_at(t):
         for sh in shots:
