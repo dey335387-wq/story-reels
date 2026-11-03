@@ -9,7 +9,7 @@
 
 ## Khaali Coach (current series, 4 parts) — tools/render_kc1.py
 Plan: Rohan (Dadar→Thane, last local 12:40). P1 empty coach, no station comes, woman in red saree says "tumhara station toh do saal pehle nikal gaya", window shows HIS face instead of hers. P2: he runs to the door — doors won't open; old newspaper on seat: "Dadar-Thane local hadsa, 2 saal pehle" with his photo among the dead? (he thinks he's the ghost). P3: twist — phone has 47 missed calls from "Maa", time frozen 12:40; the woman is the one who died and keeps reliving it; she wants him to stay. P4: final — he pulls the chain, wakes in hospital bed (coma 2 years after the accident); nurse in red saree... last shot red saree on chair. Ending card "THE END".
-- Part 1 PUBLISHED 2026-11-03 am (vidIQ upload 4667950d-3c97-4983-83f0-d356ad9461de, FB Metricool 414797030 09:05).
+- Part 1 PUBLISHED 2026-11-03 am https://www.instagram.com/reel/DfQ6RhOjOGO/ (vidIQ upload 4667950d-3c97-4983-83f0-d356ad9461de, FB Metricool 414797030 09:05).
 - Next: Part 2 (2026-11-03 pm).
 
 ## (old) NEXT: start a brand-new original series on 2026-11-03 morning
