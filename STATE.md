@@ -7,7 +7,12 @@
 - Part 3 made 2026-11-02 evening (manually, scheduled run didn't fire). Name said in narrator's own voice; phone: "Camera 4 — Person detected: UNDER BED"; feed is from above → red light inside the ceiling fan; on the feed a hand comes out from under the bed while narrator's foot is still outside the sheet. Ends "PART 4 JALDI". vidIQ uploadId 67bae5db-27a9-4122-9bbb-996c342bbf6f. Facebook via Metricool post 414013159 (19:40 IST).
 - CLOSED after Part 3 (owner: "ye wala itna sahi nahi hai", start a different series from 2026-11-03).
 
-## NEXT: start a brand-new original series on 2026-11-03 morning
+## Khaali Coach (current series, 4 parts) — tools/render_kc1.py
+Plan: Rohan (Dadar→Thane, last local 12:40). P1 empty coach, no station comes, woman in red saree says "tumhara station toh do saal pehle nikal gaya", window shows HIS face instead of hers. P2: he runs to the door — doors won't open; old newspaper on seat: "Dadar-Thane local hadsa, 2 saal pehle" with his photo among the dead? (he thinks he's the ghost). P3: twist — phone has 47 missed calls from "Maa", time frozen 12:40; the woman is the one who died and keeps reliving it; she wants him to stay. P4: final — he pulls the chain, wakes in hospital bed (coma 2 years after the accident); nurse in red saree... last shot red saree on chair. Ending card "THE END".
+- Part 1 PUBLISHED 2026-11-03 am (vidIQ upload 4667950d-3c97-4983-83f0-d356ad9461de, FB Metricool 414797030 09:05).
+- Next: Part 2 (2026-11-03 pm).
+
+## (old) NEXT: start a brand-new original series on 2026-11-03 morning
 - Must feel stronger than Camera 4: relatable Indian setting (hostel, train, village, old haveli, night shift, wrong-number call...), a clear hero with a name, a scarier and more emotional hook in the first 2 sec, real twist per part, 4-5 parts total.
 - New series = new tag text in the HUD (not "CAMERA 4") and visuals redrawn for that setting; same dark comic style + Gemini voice + background music.
 
