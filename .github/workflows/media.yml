@@ -42,6 +42,14 @@ jobs:
             ffmpeg -loglevel error -y -i "/tmp/$n.wav" -b:a 160k "media/$n.mp3"
             git rm -q "$f"
           done
+      - name: Images (Wikimedia Commons, free licenses)
+        run: |
+          shopt -s nullglob
+          for f in inbox/*.img; do
+            n=$(basename "$f" .img)
+            python tools/fetch_images.py "$f" "media/img/$n"
+            git rm -q "$f"
+          done
       - name: Commit
         run: |
           git config user.name "github-actions[bot]"
