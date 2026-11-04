@@ -12,6 +12,11 @@
 - From now: first 1.5 s must show the scariest image + a shock line (start in the middle of the action,
   recap later), keep Reels 22-30 s, captions bigger on first line, end on a sharper cliffhanger.
 
+## Manager notes (2026-11-04)
+- KC P3: 146 views, 35% watched (best so far, hook = '47 missed calls'); KC P4 finale: 22 views in 3 h, 29% watched, skip 38% (improving).
+- Lesson: a concrete shocking detail in the first line (number, object, phone screen) works better than mood. Keep doing it.
+- FB finale published: https://facebook.com/reel/1261579896191071
+
 ## Khaali Coach (current series, 4 parts) — tools/render_kc1.py
 Plan: Rohan (Dadar→Thane, last local 12:40). P1 empty coach, no station comes, woman in red saree says "tumhara station toh do saal pehle nikal gaya", window shows HIS face instead of hers. P2: he runs to the door — doors won't open; old newspaper on seat: "Dadar-Thane local hadsa, 2 saal pehle" with his photo among the dead? (he thinks he's the ghost). P3: twist — phone has 47 missed calls from "Maa", time frozen 12:40; the woman is the one who died and keeps reliving it; she wants him to stay. P4: final — he pulls the chain, wakes in hospital bed (coma 2 years after the accident); nurse in red saree... last shot red saree on chair. Ending card "THE END".
 - Part 1 PUBLISHED 2026-11-03 am https://www.instagram.com/reel/DfQ6RhOjOGO/ (vidIQ upload 4667950d-3c97-4983-83f0-d356ad9461de, FB Metricool 414797030 09:05).
