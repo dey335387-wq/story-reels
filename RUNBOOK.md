@@ -26,7 +26,16 @@ Owner wants 2 original Hinglish horror/suspense story Reels per day, posted auto
   If it fails, check `gh run list`/`gh run view --log-failed`. Fallback: inbox/<id>.tts
   (line1 hi-IN-MadhurNeural, line2 -5%, then plain text).
 
-## 3. Video (local, free)
+## 3. Video (local, free) — NEW STYLE from 2026-11-05 (owner request)
+- Owner said the old halftone/stick-figure look is "ajeeb, bas dots dikhte hain". From now on ALL horror
+  Reels use INK-WASH style with realistic-looking people: free-license real photos (inbox/<id>.img →
+  Wikimedia; Pexels later if a PEXELS_API_KEY secret exists) turned into ink-wash paintings by
+  tools/inkwash.py, rendered with tools/render_ink.py (story.json like render_news: series/part/next,
+  caps with img/hot/stat/kicker/focus 0-1 for vertical crop). Pick photos of places/objects/anonymous
+  people (never public figures); look at every photo + rendered frames before the full render.
+- The old tools/render_*.py drawing renderers are retired (don't use halftone again).
+
+## 3-old. Video (local, free) — retired
 - Copy tools/render_p2.py → render_<id>.py; rewrite CAPS (Roman Hinglish caption per spoken
   phrase), HOT words, SCENE_OF, STAMP and scene_img() drawings for this episode's beats.
   Keep the CCTV dark-comic look (CAMERA 4 tag, red/white captions, halftone, glitch cuts,
