@@ -30,7 +30,7 @@ Plan: Neha (night-shift call-centre girl) lives on floor 7 of a 12-floor buildin
 - Part 1 PUBLISHED 2026-11-05 am https://www.instagram.com/reel/DfWEAT2DQha/ (vidIQ upload b501591f-560a-4e9f-b31f-4694b68f88ea; FB Metricool 417286791 scheduled 09:01 IST, PENDING at post time). Hook: dark hand with red nails pressing glowing 13 + "Hamari building mein sirf 12 floor hain... phir lift mein 13 kaise jal raha hai?" 32 s with end card "TO BE CONTINUED... PART 2 AAJ RAAT".
 
 - Part 2 PUBLISHED 2026-11-05 pm https://www.instagram.com/reel/DfXIv-jD5Tk/ — FIRST INK-WASH Reel (tools/render_ink.py, Wikimedia photos media/img/m13p2): phone rings from her own number NEHA; lift shuts; stairs down but every floor sign says 13; she answers — her own voice: "Neeche mat jaana Neha... wo main nahi hoon."; someone climbing up the stairs humming her favourite song. vidIQ upload 2a9b40b1-7857-4371-96c9-8be02bb6e048; FB Metricool 417734330 (19:03).
-## NEXT: 13vi Manzil Part 3 (2026-11-06 am) in INK-WASH style (render_ink.py). Hook idea: register page with her own handwriting "Neha — 1303".
+## NEXT: 13vi Manzil Part 3 (2026-11-06 am) as PROCEDURAL INK-WASH ANIMATION (tools/inkanim.py, like tools/sample_inkanim.py — owner approved; no stock photos). Hook idea: register page with her own handwriting "Neha — 1303".
 
 ## (old) NEXT: start a brand-new original series on 2026-11-03 morning
 - Must feel stronger than Camera 4: relatable Indian setting (hostel, train, village, old haveli, night shift, wrong-number call...), a clear hero with a name, a scarier and more emotional hook in the first 2 sec, real twist per part, 4-5 parts total.

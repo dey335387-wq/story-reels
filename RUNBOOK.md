@@ -26,7 +26,20 @@ Owner wants 2 original Hinglish horror/suspense story Reels per day, posted auto
   If it fails, check `gh run list`/`gh run view --log-failed`. Fallback: inbox/<id>.tts
   (line1 hi-IN-MadhurNeural, line2 -5%, then plain text).
 
-## 3. Video (local, free) — NEW STYLE from 2026-11-05 (owner request)
+## 3. Video (local, free) — CURRENT STYLE from 2026-11-05 evening (owner approved the 15 s sample)
+- Owner said: no stock footage/photos — make the animation ourselves. APPROVED look = tools/sample_inkanim.py:
+  procedural INK-WASH animation drawn in code with tools/inkanim.py (paper, tapered brush strokes, washes,
+  realistic-proportion 8-head figures via person_back()/ghost_front(), flicker, grain, vignette, red accent).
+- For each episode write tools/anim_<id>.py based on sample_inkanim.py: 4-6 animated scenes matching the
+  script beats (new backgrounds per setting: corridor, lift panel, stairwell, room, train...), camera
+  push-ins, moving hair/dupatta, flicker; captions = Roman Hinglish phrases timed from tools/align.py SRT
+  (wrap ~18 chars, hot words red), end card "TO BE CONTINUED... / PART N ..." (finale: "THE END...?").
+- Faces: keep people seen from behind / in shadow / hair over face (code-drawn faces look bad).
+- Speed: ~15 s render per 1 s video; render frames first, look, then full render.
+- Music: tools/bgm.py as before.
+
+## 3-prev. (retired 2026-11-05) photo ink-wash via render_ink.py — do NOT use (owner rejected stock photos)
+
 - Owner said the old halftone/stick-figure look is "ajeeb, bas dots dikhte hain". From now on ALL horror
   Reels use INK-WASH style with realistic-looking people: free-license real photos (inbox/<id>.img →
   Wikimedia; Pexels later if a PEXELS_API_KEY secret exists) turned into ink-wash paintings by
