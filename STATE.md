@@ -17,7 +17,12 @@
 - Lesson: a concrete shocking detail in the first line (number, object, phone screen) works better than mood. Keep doing it.
 - FB finale published: https://facebook.com/reel/1261579896191071
 
-## Khaali Coach (current series, 4 parts) — tools/render_kc1.py
+## Manager notes (2026-11-05)
+- 13vi Manzil P1 139 views, 37% watched, skip 37% (best retention so far). P2 (first ink-wash photo look) 113 views in 3 h, 24%.
+- KC finale ended at 131 views. 30-day total 1,024 views.
+- From 2026-11-06: procedural ink-wash ANIMATION style (owner approved), + new 12:30 'Dimaag Lagao' puzzle series.
+
+## Khaali Coach (series, 4 parts) — tools/render_kc1.py
 Plan: Rohan (Dadar→Thane, last local 12:40). P1 empty coach, no station comes, woman in red saree says "tumhara station toh do saal pehle nikal gaya", window shows HIS face instead of hers. P2: he runs to the door — doors won't open; old newspaper on seat: "Dadar-Thane local hadsa, 2 saal pehle" with his photo among the dead? (he thinks he's the ghost). P3: twist — phone has 47 missed calls from "Maa", time frozen 12:40; the woman is the one who died and keeps reliving it; she wants him to stay. P4: final — he pulls the chain, wakes in hospital bed (coma 2 years after the accident); nurse in red saree... last shot red saree on chair. Ending card "THE END".
 - Part 1 PUBLISHED 2026-11-03 am https://www.instagram.com/reel/DfQ6RhOjOGO/ (vidIQ upload 4667950d-3c97-4983-83f0-d356ad9461de, FB Metricool 414797030 09:05).
 - Part 2 PUBLISHED 2026-11-03 pm https://www.instagram.com/reel/DfR_F39DVIf/ (FB https://facebook.com/reel/1055563830873748): doors won't open, outside only darkness; old newspaper "Dadar-Thane local haadsa, 17 maut", 2 years ago; 3rd photo of the dead = Rohan; she whispers at his ear "Ab samjhe Rohan? Hum dono yahin rehte hain." vidIQ upload 21f4a70e-d215-4549-9f90-5396be8b5129; FB Metricool 415268439 (19:05). tools/render_kc2.py.
