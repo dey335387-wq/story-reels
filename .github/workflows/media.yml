@@ -60,6 +60,14 @@ jobs:
             python tools/gemini_image.py "$f" "media/gimg/$n" || true
             git rm -q "$f"
           done
+      - name: Free images (Pollinations)
+        run: |
+          shopt -s nullglob
+          for f in inbox/*.pimg; do
+            n=$(basename "$f" .pimg)
+            python tools/free_image.py "$f" "media/pimg/$n" || true
+            git rm -q "$f"
+          done
       - name: Commit
         run: |
           git config user.name "github-actions[bot]"
