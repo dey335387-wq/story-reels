@@ -22,8 +22,9 @@ def ink(img, w=1080, h=1240, seed=1, red=True):
     img = img[y0:y0 + h, x0:x0 + w]
     sty = cv2.stylization(img, sigma_s=60, sigma_r=0.45)          # painterly, keeps faces realistic
     g = cv2.cvtColor(sty, cv2.COLOR_RGB2GRAY).astype(np.float32)
-    g = cv2.normalize(g, None, 0, 255, cv2.NORM_MINMAX)
-    g = 255 * (g / 255) ** 1.35                                     # darker, horror mood
+    lo, hi = np.percentile(g, 2), np.percentile(g, 98)
+    g = np.clip((g - lo) / max(1, hi - lo) * 255, 0, 255)           # per-photo contrast stretch
+    g = 255 * (g / 255) ** 1.15                                     # slightly darker, horror mood
     # wet wash: blend soft + slightly posterized tones
     post = np.round(g / 255 * 5) / 5 * 255
     wash = cv2.GaussianBlur(post, (0, 0), 3.0) * 0.45 + g * 0.55
