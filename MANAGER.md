@@ -1,6 +1,7 @@
 # Project manager checklist (runs daily 22:15 IST + whenever owner asks)
 
 Goal: owner never has to remind anyone. 2 Reels/day (~9:15 AM, ~7:25 PM IST) on Instagram + Facebook,
+Also daily 12:30 PM "Dimaag Lagao" puzzle Reel on IG+FB (PUZZLE_RUNBOOK.md, puzzles/STATE.md) — verify it too.
 new original horror series (Camera 4 closed), Gemini voice, bgm.py music, 0 vidIQ credits.
 
 1. git pull. For today's slots (am, pm): STATE.md must have an Instagram permalink + Facebook status.
