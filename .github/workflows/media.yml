@@ -50,6 +50,16 @@ jobs:
             python tools/fetch_images.py "$f" "media/img/$n"
             git rm -q "$f"
           done
+      - name: Gemini images
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          shopt -s nullglob
+          for f in inbox/*.gimg; do
+            n=$(basename "$f" .gimg)
+            python tools/gemini_image.py "$f" "media/gimg/$n" || true
+            git rm -q "$f"
+          done
       - name: Commit
         run: |
           git config user.name "github-actions[bot]"
