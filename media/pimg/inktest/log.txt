@@ -1,4 +1,0 @@
-t1 OK 58493
-t2 ERR HTTP Error 402: Payment Required
-t2 ERR HTTP Error 402: Payment Required
-t2 ERR HTTP Error 402: Payment Required
