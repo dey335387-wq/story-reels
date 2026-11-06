@@ -3,15 +3,20 @@
 Owner asked (2026-11-05): a 3rd daily Reel, NOT horror — suspense / sawal-jawab that makes viewers think.
 Time chosen from Metricool best-time data (FB peak ~10-12): 12:30 PM IST daily, on IG + FB.
 
-## Format (30-40 s, vertical, Hinglish)
-1. Hook (0-2 s): bold question on screen + voice, e.g. "Kamra andar se band tha... phir chor gaya kahan?"
-2. Mini-mystery (8-18 s): a short original situation with 3-4 clues (detective case, logic riddle,
-   impossible-looking situation, "kaun jhooth bol raha hai", math/time trick, optical/logic paradox).
-3. Question + countdown: "Socho... 5 4 3 2 1" with a ticking sound (big numbers on screen).
-4. Answer + why (6-10 s), with the clue highlighted that gives it away.
-5. CTA: "Sahi socha tha? Comment mein batao. Roz dopahar 12:30 naya sawal."
-Rules: puzzle must be logically airtight (re-check the answer step by step before rendering), clean
-(no gore/horror/politics), original wording (no copy-paste from other creators); vary type every day.
+## Format from 2026-11-07 — "SOCHO TUM..." survival / decision scenarios (owner reference 2026-11-06: an
+"Imagine you wake up..." Reel with a DAY / time / floor HUD; we take the FORMAT only — never copy that
+creator's character, art, script or story)
+- 2nd-person scenario: "Socho, tum raat 3:12 baje uthte ho... 9th floor... aur ..." → one strange/tense
+  situation with a clear logic clue → 3 options on cards: A / B / C → "Tum kya karoge?" → 3 s countdown →
+  the SMART answer + one-line reason (logic, safety knowledge, observation) → "Comment karo tumne kya chuna".
+- Suspense yes, horror NO (no ghosts/gore). Answer must be logically airtight and safe advice (e.g. fire:
+  touch the door first; lift stuck: press alarm, don't pry doors; lost in forest: stay put...) or a clever
+  observation clue hidden in the scene (clock, floor number, shadow, footprints).
+- Episodes are standalone. Each new day = new scenario + new HUD: "DAY <n>  <time>  <place>".
+- Length 25-30 s max. The scenario hook + HUD must be on screen in the FIRST second; voice starts
+  immediately with "Socho...". Captions big, key word yellow.
+- Host stays CHOTU (see Character Bible): Chotu is the "tum" in the scenario — he wakes up / walks into the
+  situation, looks around, scratches head at the options, celebrates or facepalms at the answer.
 
 ## Visuals — 3D VOXEL style with the SAME host character every episode (owner request 2026-11-06)
 - Base: tools/v3d/scene.html + tools/v3d/render.js (Three.js via headless Chromium; see tools/v3d/README.md for
@@ -24,6 +29,7 @@ Rules: puzzle must be logically airtight (re-check the answer step by step befor
   and small YELLOW pom cube #ffd23f on top; TEAL hoodie #1fb5a8 with white chest patch; navy trousers #2d3a8c;
   white shoes. Same proportions/geometry as in scene.html (copy the kid block verbatim). He is the quiz host:
   waves at the start, does the hand-on-chin "thinking" pose during the countdown, celebrates at the end.
+- HUD overlay top-left (red dot "DAY n", big time, small place) like a survival-game timer.
 - Keep the visual identity: cozy purple room / colourful voxel cubes / floating chat cards / big yellow 3D "?" /
   yellow countdown top-right / orange "DIMAAG LAGAO" tag. Rooms/props can change per puzzle (kitchen, street,
   classroom...) but Chotu stays identical.
