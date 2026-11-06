@@ -15,8 +15,10 @@ Rules: puzzle must be logically airtight (re-check the answer step by step befor
 
 ## Visuals — 3D VOXEL style with the SAME host character every episode (owner request 2026-11-06)
 - Base: tools/v3d/scene.html + tools/v3d/render.js (Three.js via headless Chromium; see tools/v3d/README.md for
-  getting three.js from GitHub — npm is blocked). Copy scene.html to tools/v3d/puz_<date>.html per episode and
-  change only the room props / cards / captions / timeline for that puzzle.
+  getting three.js from GitHub — npm is blocked). USE tools/v3d/puz.html (data-driven) and only rewrite tools/v3d/ep.js per
+  episode: C = countdown start (after voice part A), B = answer start, T = total, cards [{text,col,t,x,y}],
+  caps [[start,end,html]]. Two voice files: part A (question) and part B (answer) — 5 s countdown between.
+  Render: cd tools/v3d && PAGE=puz.html NF=<T*30> node render.js <framedir>  (2026-11-06 episode = example).
 - CHARACTER BIBLE "CHOTU" (never change): voxel kid; head 1.5 cube, skin #f2c29a; face texture = dark square
   eyes, black ROUND GLASSES, pink cheeks, small dark-red smile; ORANGE beanie #ff7a1a with darker band #e8620e
   and small YELLOW pom cube #ffd23f on top; TEAL hoodie #1fb5a8 with white chest patch; navy trousers #2d3a8c;
