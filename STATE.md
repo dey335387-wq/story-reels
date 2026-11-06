@@ -5,6 +5,11 @@
 - 2026-11-06 pm | DO CHAI | highway dhaba NH-48, 3 AM, man driving alone | bill says '2 chai'; owner: 2nd is for the one on your back seat; car empty; 20 km later someone sips tea behind him, mirror: hot kulhad on back seat + long-haired woman with red eyes: "Chai acchi thi... ab ghar chalein?" | IG https://www.instagram.com/reel/DfZwqFekzyW/ (published 19:25 IST) | FB https://facebook.com/reel/1443379010779455 (PUBLISHED 19:31). tools/anim_s1chai.py (ink-wash anim, 35.4 s incl. end card, voice atempo 1.1), vidIQ upload b5843628-1ac6-45b3-a8ea-0bc38439412a.
 - NEXT (2026-11-07 am): brand-new standalone story, NOT dhaba/highway/car/lift/train/CCTV. Ideas: PG room wrong-number call, hostel roll-call, village well, night-shift hospital ward. Note: full render took ~25 min — start early.
 
+## Manager notes (2026-11-06)
+- 13vi Manzil P3 (first procedural ink-wash ANIMATION): 1,595 views, 41% watched, skip 31% — BEST EVER (10x). Animation style works; keep it.
+- Do Chai (first standalone): 168 views in 3 h, 27% watched, skip 44%. Fine start.
+- Lesson for standalone stories: the P3 hook was a concrete written proof ("register ka aakhri naam... meri likhawat"). Open with an object/proof shot.
+
 # Story state
 
 ## Camera 4
