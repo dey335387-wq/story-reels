@@ -59,7 +59,7 @@ graphics, and the character must never just stand — it flies up/down/forward/b
 
 ## Steps
 1. Lock: locks/news-YYYY-MM-DD (same rules as RUNBOOK.md 0b).
-2. Research (~10 searches): pick today's single most interesting India/world/tech/science story for a
+2. Research (~10 searches): pick today's 5-6 most important India/world/sports/tech stories (see FORMAT) for a
    young Indian audience. Write facts + source URLs into news/YYYY-MM-DD.md.
 3. Script: 8-11 Hindi (Devanagari) lines, 150-190 words total, structure: hook (shocking number/
    question) → kya hua → kyun important → aap par asar → aage kya → CTA "aisi khabron ke liye follow".
