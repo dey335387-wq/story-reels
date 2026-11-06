@@ -1,2 +1,4 @@
 __pycache__/
 *.pyc
+tools/v3d/three
+tools/v3d/media

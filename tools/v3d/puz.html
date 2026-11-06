@@ -1,0 +1,115 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+  html,body{margin:0;background:#000;overflow:hidden;font-family:Poppins,Inter,sans-serif}
+  #wrap{position:relative;width:720px;height:1280px}
+  canvas{display:block}
+  .ov{position:absolute;left:0;right:0;text-align:center;color:#fff;font-weight:800;pointer-events:none}
+  #cap{bottom:190px;font-size:44px;line-height:1.15;padding:0 40px;text-shadow:0 4px 0 #000,0 0 18px rgba(0,0,0,.6)}
+  #cap b{color:#ffd23f}
+  #count{top:150px;left:auto;right:40px;font-size:220px;color:#ffd23f;text-shadow:0 10px 0 #b8540a,0 0 40px rgba(255,180,0,.6);opacity:0}
+  #tag{top:40px;left:36px;right:auto;font-size:30px;background:#ff5a36;padding:8px 18px;border-radius:14px;box-shadow:0 6px 0 #a3301a}
+</style></head>
+<body><div id="wrap"><div id="tag" class="ov">DIMAAG LAGAO</div><div id="count" class="ov">5</div><div id="cap" class="ov"></div></div>
+<script type="importmap">{"imports":{"three":"./three/build/three.module.js","three/addons/":"./three/examples/jsm/"}}</script>
+<script src="ep.js"></script>
+<script type="module">
+import * as THREE from 'three';
+import { FontLoader } from 'three/addons/loaders/FontLoader.js';
+import { TextGeometry } from 'three/addons/geometries/TextGeometry.js';
+const W=720,H=1280;
+const renderer=new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});
+renderer.setPixelRatio(1.5); renderer.setSize(W,H); renderer.shadowMap.enabled=true; renderer.shadowMap.type=THREE.PCFSoftShadowMap;
+renderer.toneMapping=THREE.ACESFilmicToneMapping; renderer.outputColorSpace=THREE.SRGBColorSpace;
+document.getElementById('wrap').prepend(renderer.domElement);
+const scene=new THREE.Scene(); scene.background=new THREE.Color(0x1b1430); scene.fog=new THREE.Fog(0x1b1430,14,30);
+const cam=new THREE.PerspectiveCamera(42,W/H,0.1,100);
+const box=(w,h,d,c,x,y,z,o={})=>{const m=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),new THREE.MeshStandardMaterial({color:c,roughness:o.r??0.8,metalness:0,emissive:o.e??0x000000,emissiveIntensity:o.ei??1}));m.position.set(x,y,z);m.castShadow=true;m.receiveShadow=true;return m};
+function tex(w,h,draw){const c=document.createElement('canvas');c.width=w;c.height=h;const g=c.getContext('2d');draw(g,w,h);const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;t.anisotropy=8;return t}
+// ---- room
+const room=new THREE.Group(); scene.add(room);
+const floorT=tex(512,512,(g,w,h)=>{for(let i=0;i<8;i++){g.fillStyle=i%2?'#8a5a3a':'#7a4e32';g.fillRect(0,i*64,w,64);g.fillStyle='rgba(0,0,0,.15)';g.fillRect(0,i*64+62,w,2)}});
+floorT.wrapS=floorT.wrapT=THREE.RepeatWrapping; floorT.repeat.set(3,3);
+const floor=new THREE.Mesh(new THREE.PlaneGeometry(16,16),new THREE.MeshStandardMaterial({map:floorT,roughness:.9}));floor.rotation.x=-Math.PI/2;floor.receiveShadow=true;room.add(floor);
+const wallT=tex(512,512,(g,w,h)=>{g.fillStyle='#3d2f5c';g.fillRect(0,0,w,h);for(let x=0;x<w;x+=32){g.fillStyle='rgba(255,255,255,.04)';g.fillRect(x,0,16,h)}});
+const back=new THREE.Mesh(new THREE.PlaneGeometry(16,9),new THREE.MeshStandardMaterial({map:wallT,roughness:1}));back.position.set(0,4.5,-4);back.receiveShadow=true;room.add(back);
+const left=back.clone();left.rotation.y=Math.PI/2;left.position.set(-5,4.5,2);room.add(left);
+// window with stars + moon
+const winT=tex(512,512,(g,w,h)=>{const gr=g.createLinearGradient(0,0,0,h);gr.addColorStop(0,'#0b1446');gr.addColorStop(1,'#3a2a7a');g.fillStyle=gr;g.fillRect(0,0,w,h);for(let i=0;i<70;i++){g.fillStyle='rgba(255,255,255,'+Math.random()+')';g.fillRect(Math.random()*w,Math.random()*h*0.8,3,3)}g.fillStyle='#fff3c4';g.beginPath();g.arc(380,120,48,0,7);g.fill()});
+const win=new THREE.Mesh(new THREE.PlaneGeometry(3,2.2),new THREE.MeshBasicMaterial({map:winT}));win.position.set(-1.8,5,-3.98);room.add(win);
+room.add(box(3.2,.15,.15,0xe9d8b4,-1.8,6.15,-3.9),box(3.2,.15,.15,0xe9d8b4,-1.8,3.85,-3.9),box(.15,2.4,.15,0xe9d8b4,-3.4,5,-3.9),box(.15,2.4,.15,0xe9d8b4,-.2,5,-3.9),box(.1,2.3,.1,0xe9d8b4,-1.8,5,-3.9));
+// desk + monitor + keyboard + mug
+room.add(box(4.2,.25,1.8,0xb07a4f,1.4,2.2,-2.6),box(.2,2.2,.2,0x7a5034,-.5,1.1,-3.3),box(.2,2.2,.2,0x7a5034,3.3,1.1,-3.3),box(.2,2.2,.2,0x7a5034,-.5,1.1,-1.9),box(.2,2.2,.2,0x7a5034,3.3,1.1,-1.9));
+const scrC=document.createElement('canvas');scrC.width=512;scrC.height=320;const scrG=scrC.getContext('2d');const scrT=new THREE.CanvasTexture(scrC);scrT.colorSpace=THREE.SRGBColorSpace;
+function drawScreen(t){const g=scrG;const gr=g.createLinearGradient(0,0,512,320);gr.addColorStop(0,'#14b8a6');gr.addColorStop(1,'#6d28d9');g.fillStyle=gr;g.fillRect(0,0,512,320);g.fillStyle='#fff';g.font='bold 150px Poppins';g.textAlign='center';g.textBaseline='middle';g.save();g.translate(256,165);g.rotate(Math.sin(t*3)*.15);g.fillText('?',0,0);g.restore();scrT.needsUpdate=true}
+room.add(box(2.4,1.6,.15,0x222222,1.6,3.3,-3.2));
+const scr=new THREE.Mesh(new THREE.PlaneGeometry(2.2,1.4),new THREE.MeshBasicMaterial({map:scrT}));scr.position.set(1.6,3.3,-3.11);room.add(scr);
+room.add(box(.2,.6,.2,0x333333,1.6,2.55,-3.2),box(1.6,.08,.5,0xdddddd,1.5,2.37,-2.3),box(.3,.35,.3,0xff6b6b,2.8,2.5,-2.3));
+// plant
+room.add(box(.6,.6,.6,0xd96c3b,-0.1,2.65,-3.0));
+for(let i=0;i<9;i++){const l=box(.22,.5+Math.random()*.6,.22,i%2?0x2fbf71:0x22a35e,-0.1+(Math.random()-.5)*.6,3.2+Math.random()*.5,-3+(Math.random()-.5)*.5);l.rotation.z=(Math.random()-.5)*.6;room.add(l)}
+// shelf with colourful cubes
+room.add(box(3,.15,.7,0xb07a4f,-2.6,6.9,-3.65));
+const cols=[0xff5a36,0xffd23f,0x3ec7ff,0x9b5cff,0x2fbf71];
+for(let i=0;i<5;i++){const c=box(.45,.45,.45,cols[i],-3.7+i*.55,7.2,-3.6);c.rotation.y=i*.3;room.add(c)}
+// floating wall cubes (decor)
+const deco=[];for(let i=0;i<6;i++){const c=box(.55,.55,.2,cols[i%5],2.2+Math.random()*2.6,4.8+Math.random()*2.8,-3.85);deco.push(c);room.add(c)}
+// ---- voxel character "Chotu" (original): orange beanie, round glasses, teal hoodie
+const kid=new THREE.Group(); scene.add(kid); kid.position.set(0.4,0,0.2);
+const faceT=tex(256,256,(g,w,h)=>{g.fillStyle='#f2c29a';g.fillRect(0,0,w,h);g.fillStyle='#2b1a12';g.fillRect(64,104,30,38);g.fillRect(162,104,30,38);
+  g.strokeStyle='#1d1d1d';g.lineWidth=10;g.beginPath();g.arc(79,123,38,0,7);g.stroke();g.beginPath();g.arc(177,123,38,0,7);g.stroke();g.beginPath();g.moveTo(117,123);g.lineTo(139,123);g.stroke();
+  g.fillStyle='#e8807a';g.fillRect(40,170,26,14);g.fillRect(190,170,26,14);g.fillStyle='#7a2b22';g.fillRect(104,182,48,14);g.fillRect(96,172,10,12);g.fillRect(150,172,10,12)});
+const skin=new THREE.MeshStandardMaterial({color:0xf2c29a,roughness:.8});
+const headM=[skin,skin,skin,skin,new THREE.MeshStandardMaterial({map:faceT,roughness:.8}),skin];
+const head=new THREE.Mesh(new THREE.BoxGeometry(1.5,1.5,1.5),headM);head.castShadow=true;
+const headG=new THREE.Group();headG.add(head);headG.position.y=3.7;kid.add(headG);
+const beanie=box(1.62,.6,1.62,0xff7a1a,0,.62,0);headG.add(beanie);headG.add(box(1.66,.18,1.66,0xe8620e,0,.32,0));headG.add(box(.35,.3,.35,0xffd23f,0,1.05,0));
+const body=box(1.3,1.5,.85,0x1fb5a8,0,2.2,0);kid.add(body);kid.add(box(.5,.5,.05,0xffffff,0,2.35,.44));
+const armL=new THREE.Group(),armR=new THREE.Group();armL.position.set(-.85,2.85,0);armR.position.set(.85,2.85,0);
+armL.add(box(.42,1.3,.42,0x1fb5a8,0,-.6,0),box(.4,.35,.4,0xf2c29a,0,-1.35,0));armR.add(box(.42,1.3,.42,0x1fb5a8,0,-.6,0),box(.4,.35,.4,0xf2c29a,0,-1.35,0));kid.add(armL,armR);
+const legL=box(.5,1.4,.55,0x2d3a8c,-.33,.75,0),legR=box(.5,1.4,.55,0x2d3a8c,.33,.75,0);kid.add(legL,legR);kid.add(box(.55,.25,.75,0xffffff,-.33,.1,.08),box(.55,.25,.75,0xffffff,.33,.1,.08));
+// ---- floating chat cards
+function card(text,col){const t=tex(640,200,(g,w,h)=>{g.fillStyle='rgba(0,0,0,.25)';g.beginPath();g.roundRect(10,18,w-20,h-28,40);g.fill();g.fillStyle=col;g.beginPath();g.roundRect(0,0,w-20,h-30,40);g.fill();
+  g.fillStyle='#1b1430';g.font='bold '+(text.length>18?44:54)+'px Poppins';g.textBaseline='middle';g.fillText(text,40,(h-30)/2)});
+  const m=new THREE.Mesh(new THREE.PlaneGeometry(2.7,0.84),new THREE.MeshBasicMaterial({map:t,transparent:true}));m.scale.setScalar(0.001);scene.add(m);return m}
+const EP=window.EP;const cards=EP.cards.map(c=>[card(c.text,c.col),c.t,c.x,c.y,c.hide??EP.C]);
+// ---- big 3D question mark
+let qMesh=null;
+new FontLoader().load('./three/examples/fonts/helvetiker_bold.typeface.json',f=>{const g=new TextGeometry('?',{font:f,size:2.2,depth:.6,bevelEnabled:true,bevelSize:.06,bevelThickness:.08,bevelSegments:3});g.center();
+  qMesh=new THREE.Mesh(g,new THREE.MeshStandardMaterial({color:0xffd23f,roughness:.35,emissive:0xff8a00,emissiveIntensity:.25}));qMesh.castShadow=true;qMesh.scale.setScalar(.001);scene.add(qMesh);window.READY=true});
+// ---- confetti
+const conf=[];for(let i=0;i<70;i++){const c=box(.22,.22,.22,cols[i%5],0,0,0);c.visible=false;c.userData.v=new THREE.Vector3((Math.random()-.5)*7,5+Math.random()*6,(Math.random()-.5)*5);c.userData.r=new THREE.Vector3(Math.random()*6,Math.random()*6,0);scene.add(c);conf.push(c)}
+// ---- lights
+scene.add(new THREE.HemisphereLight(0xbfb4ff,0x3a2410,.9));
+const key=new THREE.DirectionalLight(0xffe2c0,2.2);key.position.set(4,9,6);key.castShadow=true;key.shadow.mapSize.set(2048,2048);Object.assign(key.shadow.camera,{left:-8,right:8,top:10,bottom:-4});scene.add(key);
+const glow=new THREE.PointLight(0x6d28d9,12,9);glow.position.set(1.6,3.3,-2.4);scene.add(glow);
+const rim=new THREE.PointLight(0x3ec7ff,18,12);rim.position.set(-4,6,3);scene.add(rim);
+// ---- timeline
+const ease=x=>x<.5?2*x*x:1-Math.pow(-2*x+2,2)/2, cl=x=>Math.min(1,Math.max(0,x)), pop=(t,a)=>{const x=cl((t-a)/.35);return x<1?ease(x)*(1+.25*Math.sin(x*Math.PI)):1};
+const CAP=EP.caps, C=EP.C, B=EP.B, T=EP.T;
+window.renderFrame=(t)=>{
+  drawScreen(t);
+  const p=ease(cl(t/2.5));
+  let cx=THREE.MathUtils.lerp(-3.5,0.8,p), cy=THREE.MathUtils.lerp(8,5.2,p), cz=THREE.MathUtils.lerp(17,12.5,p);
+  if(t>C&&t<B){const q=ease(cl((t-C)/1.2));cy+=q*.6;cz-=q*1.4}
+  if(t>=B){const q=ease(cl((t-B)/1.0));cz+=q*.8-Math.sin((t-B)*2)*.2}
+  cam.position.set(cx+Math.sin(t*.6)*.3,cy,cz);cam.lookAt(0.8,4.2,-1.2);
+  kid.position.y=Math.abs(Math.sin(t*3.2))*.06+(t>=B&&t<B+2.2?Math.abs(Math.sin((t-B)*6))*.5:0);
+  const talk=t<C||t>=B;
+  headG.rotation.y=t<2.5?Math.sin(t*1.2)*.4:(talk?Math.sin(t*1.5)*.3:-.25+Math.sin(t*2)*.08);
+  headG.rotation.z=t>C&&t<B?Math.sin(t*2.2)*.12:0;
+  const wave=(t>0.3&&t<2.4)||(t>T-2.2);
+  const cele=t>=B&&t<B+2.2;
+  armR.rotation.z=wave?2.6+Math.sin(t*14)*.35:(cele?2.8+Math.sin(t*10)*.3:(talk?.25+Math.sin(t*5)*.2:.1));
+  armL.rotation.z=cele?-2.8-Math.sin(t*10)*.3:(t>C&&t<B?-.35:-.1);
+  armL.rotation.x=t>C&&t<B?-2.1:0;
+  cards.forEach(([c,a,x,y,hide],i)=>{const s=t<hide?pop(t,a)*(t>=a?1:0):Math.max(0.001,1-cl((t-hide)/.4));c.scale.setScalar(Math.max(.001,s));c.position.set(x,y+Math.sin(t*2+i)*.1,0.8);c.lookAt(cam.position)});
+  if(qMesh){const s=t<C?.001:(t<B?pop(t,C):Math.max(.001,1-cl((t-B)/.3)));qMesh.scale.setScalar(Math.max(.001,s));qMesh.position.set(0.6,6.9+Math.sin(t*2)*.2,0.6);qMesh.rotation.y=t*1.8}
+  deco.forEach((d,i)=>{d.rotation.z=Math.sin(t*1.5+i)*.2});
+  conf.forEach(c=>{if(t<B||t>B+3){c.visible=false;return}const dt=t-B;c.visible=true;const v=c.userData.v;c.position.set(.4+v.x*dt,3.5+v.y*dt-4.9*dt*dt,.5+v.z*dt);c.rotation.set(c.userData.r.x*dt,c.userData.r.y*dt,0)});
+  const cap=CAP.find(c=>t>=c[0]&&t<c[1]);document.getElementById('cap').innerHTML=cap?cap[2]:'';
+  const cnt=document.getElementById('count');
+  if(t>=C+.3&&t<C+5.3){const k=Math.floor(t-C-.3);const n=5-k;const f=(t-C-.3)-k;cnt.textContent=n;cnt.style.opacity=f<.75?1:(1-(f-.75)/.25);cnt.style.transform=`scale(${1.4-0.4*Math.min(1,f*4)})`}else cnt.style.opacity=0;
+  renderer.render(scene,cam);
+};
+</script></body></html>

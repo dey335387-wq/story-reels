@@ -1,0 +1,11 @@
+window.EP={C:15.3,B:20.8,T:38.5,
+cards:[{text:'Raju: Main chor nahi!',col:'#ffffff',t:4.8,x:0.0,y:7.6},
+{text:'Pinky: Chor Golu hai!',col:'#ffd23f',t:6.95,x:1.7,y:6.7},
+{text:'Golu: Pinky jhoothi hai!',col:'#3ec7ff',t:9.12,x:0.2,y:5.85},
+{text:'CHOR = RAJU!',col:'#7dff9a',t:21.6,x:0.8,y:7.0,hide:99}],
+caps:[[0.2,4.78,'Teen dost, ek chori!<br>Sirf <b>1</b> sach bol raha hai... <b>chor kaun?</b>'],
+[4.78,6.94,'<b>Raju:</b> Main chor nahi hoon'],[6.94,9.12,'<b>Pinky:</b> Chor Golu hai'],
+[9.12,11.66,'<b>Golu:</b> Pinky jhooth bol rahi hai'],[11.66,15.3,'Sirf <b>EK</b> sach bol raha hai...<br><b>Socho!</b>'],
+[15.3,20.8,'Chor kaun?<br><b>Raju, Pinky ya Golu?</b>'],[20.8,23.1,'Jawab... chor hai <b>RAJU!</b>'],
+[23.1,26.2,'Golu chor hota, toh<br><b>Raju + Pinky</b> dono sach'],[26.2,29.1,'Pinky chor hoti, toh<br><b>Raju + Golu</b> dono sach'],
+[29.1,33.0,'Raju chor, toh sirf <b>Golu</b> sach.<br><b>Ek hi sach!</b>'],[33.0,38.5,'Sahi socha tha? <b>Comment</b> karo!<br>Roz <b>12:30</b> naya sawal']]};

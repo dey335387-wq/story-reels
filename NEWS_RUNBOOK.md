@@ -16,6 +16,31 @@ youtubeData UCwHbpK7mj-_e857StojX76w), published at 18:30 IST, style like Indian
   downloaded photo (Read) before using; drop any that shows a public figure or is off-topic/low quality.
 - Every Short different: vary story type, hook, colours of kicker, photo order. No copy-paste scripts.
 
+## STYLE from 2026-11-06 (owner request): 3D host character + FAST motion graphics
+Owner: news Shorts need their OWN consistent character (different from Chotu), fast-moving motion
+graphics, and the character must never just stand — it flies up/down/forward/back.
+- Scene: tools/v3d/news.html (Three.js, rendered by tools/v3d/render.js with PAGE=news.html NF=<frames>).
+  Data: python3 tools/v3d/make_news_ep.py story.json <srt> <voice.wav> → tools/v3d/news_ep.js (prints frames).
+  Needs tools/v3d/three (see tools/v3d/README.md; symlink /home/claude/v3d/three if present) and the
+  symlink tools/v3d/media -> ../../media (both gitignored).
+- CHARACTER BIBLE "KHABRI" (never change; geometry is in news.html — don't edit the bot block):
+  original robot reporter; round glossy WHITE body (#f4f6fb) with RED belt ring (#e63946) and a red
+  round "60" chest badge; rounded white box head with a dark screen face showing CYAN (#3ef0ff) rounded
+  eyes + mouth bar (blinks, talks, "wow" eyes on stat lines, happy eyes at the end); RED headphones with
+  band; short antenna with glowing red ball; white capsule arms with red hands; right hand holds a mic
+  with a red "60 SEC" flag cube; hovers on a CYAN jet flame (no legs). Scale 0.8.
+- Motion rules: Khabri swoops to a new spot on EVERY caption (POS cycle: right-front, left-back,
+  right-close, centre-high-back...), arcs up while moving, tilts with speed, bobs, intro fly-in with a
+  spin; photos whoosh in from the right on 3D cards and out to the left; Ken Burns inside the card;
+  camera punch-in on each caption, extra zoom on stat lines; neon grid floor + speed streaks always
+  moving; captions pop word-by-word; kicker slides in; ticker scrolls. Keep it FAST.
+- Render ≈ 0.55 s/frame (60 s Short ≈ 17 min) — start the render early, look at 5 test frames first.
+- Encode: ffmpeg -framerate 30 -i fr/f%04d.jpg -i music.m4a -vf scale=1080:1920:flags=lanczos
+  -c:v libx264 -preset veryfast -crf 21 -pix_fmt yuv420p -c:a copy -shortest out/n<date>.mp4
+- Music: python3 tools/v3d/news_music.py <voice.wav> <T> music.m4a <caption start times comma>
+  (upbeat synth bed + whooshes on cuts, ducked under voice).
+- Photo rules unchanged (free-license only, no public figures — Khabri is the "face" of the channel now).
+
 ## Steps
 1. Lock: locks/news-YYYY-MM-DD (same rules as RUNBOOK.md 0b).
 2. Research (~10 searches): pick today's single most interesting India/world/tech/science story for a
@@ -28,7 +53,7 @@ youtubeData UCwHbpK7mj-_e857StojX76w), published at 18:30 IST, style like Indian
 4. Captions: write story.json (see tools/render_news.py docstring): caps = Roman Hinglish phrases in
    spoken order, each with img, hot words, optional stat/kicker. Make tools/align.py read these caps
    (temporarily edit its import or pass list) → /tmp/n.wav + /tmp/n.srt. Count must match.
-5. Render: python3 tools/render_news.py story.json /tmp/n.wav /tmp/n.srt /tmp/nv.mp4 --frames ... → look
+5. Render (OLD 2D style, only as fallback if 3D fails): python3 tools/render_news.py story.json /tmp/n.wav /tmp/n.srt /tmp/nv.mp4 --frames ... → look
    → full render → music: BOOM= python3 tools/bgm.py ... is horror-ish; for news use
    NEWS=1 (lighter: set env BGMSTYLE=news if supported) or mix voice only + subtle drone at low volume.
 6. Host: out/n<YYYYMMDD>.mp4 → push → vidiq_video_upload(raw URL) → videoUrl.

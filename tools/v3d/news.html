@@ -1,0 +1,151 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<!-- 60 SEC KHABAR news Short scene. Host character "KHABRI" (original robot reporter) — see NEWS_RUNBOOK.md CHARACTER BIBLE.
+     Data: news_ep.js sets window.NEWS = {T, date, ticker, caps:[{s,e,html,img,stat,kicker}], credit}. -->
+<style>
+  html,body{margin:0;background:#000;overflow:hidden;font-family:Poppins,Inter,sans-serif}
+  #wrap{position:relative;width:720px;height:1280px;overflow:hidden}
+  canvas{display:block}
+  .ov{position:absolute;pointer-events:none;color:#fff;font-weight:800}
+  #brand{top:34px;left:30px;display:flex;gap:10px;align-items:center}
+  #brand .b{background:#e63946;padding:8px 16px;border-radius:12px;font-size:28px;letter-spacing:1px;box-shadow:0 6px 0 #8f1d26}
+  #brand .d{font-size:22px;opacity:.9;background:rgba(0,0,0,.45);padding:6px 12px;border-radius:10px}
+  #prog{top:0;left:0;height:8px;background:#ffd23f}
+  #kicker{left:34px;top:880px;font-size:30px;background:#ffd23f;color:#111;padding:6px 16px;border-radius:10px;transform-origin:left center}
+  #cap{left:30px;right:30px;top:940px;font-size:54px;line-height:1.12;text-shadow:0 5px 0 #000,0 0 22px rgba(0,0,0,.8)}
+  #cap b{color:#ffd23f}
+  #cap span{display:inline-block}
+  #stat{left:0;right:0;top:600px;text-align:center;font-size:170px;color:#ffd23f;text-shadow:0 10px 0 #b8540a,0 0 50px rgba(255,190,0,.7)}
+  #ticker{left:0;right:0;bottom:0;height:64px;background:#e63946;overflow:hidden;white-space:nowrap;font-size:30px;line-height:64px}
+  #ticker .lab{position:absolute;left:0;top:0;bottom:0;background:#111;padding:0 16px;z-index:2}
+  #ticker .tx{position:absolute;top:0}
+  #credit{right:20px;top:640px;font-size:16px;font-weight:600;opacity:.75}
+</style></head>
+<body><div id="wrap">
+<div id="prog" class="ov"></div>
+<div id="brand" class="ov"><div class="b">60 SEC KHABAR</div><div class="d" id="date"></div></div>
+<div id="stat" class="ov"></div><div id="kicker" class="ov"></div><div id="cap" class="ov"></div><div id="credit" class="ov"></div>
+<div id="ticker" class="ov"><div class="lab">KHABAR</div><div class="tx" id="tx"></div></div>
+</div>
+<script src="news_ep.js"></script>
+<script type="importmap">{"imports":{"three":"./three/build/three.module.js","three/addons/":"./three/examples/jsm/"}}</script>
+<script type="module">
+import * as THREE from 'three';
+import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
+const N=window.NEWS, W=720, H=1280;
+document.getElementById('date').textContent=N.date;
+document.getElementById('tx').textContent=(N.ticker+'   •   ').repeat(6);
+document.getElementById('credit').textContent=N.credit||'Photos: Wikimedia Commons';
+const renderer=new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});
+renderer.setPixelRatio(1.5);renderer.setSize(W,H);renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.outputColorSpace=THREE.SRGBColorSpace;
+document.getElementById('wrap').prepend(renderer.domElement);
+const scene=new THREE.Scene();scene.background=new THREE.Color(0x070b1a);scene.fog=new THREE.Fog(0x070b1a,16,40);
+const cam=new THREE.PerspectiveCamera(44,W/H,.1,100);
+const std=(c,o={})=>new THREE.MeshStandardMaterial({color:c,roughness:o.r??.35,metalness:o.m??.1,emissive:o.e??0,emissiveIntensity:o.ei??1});
+const mesh=(g,m,x=0,y=0,z=0)=>{const k=new THREE.Mesh(g,m);k.position.set(x,y,z);return k};
+function ctex(w,h,draw){const c=document.createElement('canvas');c.width=w;c.height=h;const g=c.getContext('2d');draw(g,w,h);const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;return [t,c,g]}
+// ---------- studio: neon grid floor, light blobs, speed streaks
+const grid=new THREE.GridHelper(80,80,0x3ec7ff,0x1d3b7a);grid.position.y=-4.2;grid.material.transparent=true;grid.material.opacity=.55;scene.add(grid);
+const blobs=[[0xe63946,-6,6,-12],[0x3ec7ff,7,4,-14],[0x9b5cff,0,10,-16]].map(([c,x,y,z])=>{const m=mesh(new THREE.SphereGeometry(3.2,24,16),new THREE.MeshBasicMaterial({color:c,transparent:true,opacity:.22}),x,y,z);scene.add(m);return m});
+const streaks=[];for(let i=0;i<46;i++){const m=mesh(new THREE.BoxGeometry(.03,.03,1.6+Math.random()*2.5),new THREE.MeshBasicMaterial({color:i%3?0x3ec7ff:0xffd23f,transparent:true,opacity:.6}));m.userData={x:(Math.random()-.5)*16,y:(Math.random()-.5)*14+2,z0:Math.random()*40,sp:14+Math.random()*16};scene.add(m);streaks.push(m)}
+scene.add(new THREE.HemisphereLight(0xcfe3ff,0x1a1030,1.1));
+const key=new THREE.DirectionalLight(0xffffff,2.4);key.position.set(3,6,9);scene.add(key);
+const rimR=new THREE.PointLight(0xe63946,30,14);rimR.position.set(-4,1,3);scene.add(rimR);
+const rimB=new THREE.PointLight(0x3ec7ff,30,14);rimB.position.set(4,2,3);scene.add(rimB);
+// ---------- photo panels (one per run of same image)
+const loader=new THREE.TextureLoader();const texCache={};
+function photo(src){if(!texCache[src]){const t=loader.load(src);t.colorSpace=THREE.SRGBColorSpace;texCache[src]=t}return texCache[src]}
+const segs=[];N.caps.forEach((c,i)=>{if(!segs.length||segs[segs.length-1].img!==c.img)segs.push({img:c.img,s:c.s,e:c.e});else segs[segs.length-1].e=c.e});
+const PW=5.2,PH=3.6;
+segs.forEach((sg,i)=>{const g=new THREE.Group();const t=photo(sg.img).clone();t.needsUpdate=true;t.colorSpace=THREE.SRGBColorSpace;
+  const frame=mesh(new RoundedBoxGeometry(PW+.22,PH+.22,.12,4,.1),std(0xffffff,{r:.5}));g.add(frame);
+  const pic=mesh(new THREE.PlaneGeometry(PW,PH),new THREE.MeshBasicMaterial({map:t}),0,0,.07);g.add(pic);
+  const tag=mesh(new THREE.BoxGeometry(1.0,.28,.14),std(0xe63946,{e:0xe63946,ei:.3}),-PW/2+.55,PH/2+.02,.08);g.add(tag);
+  sg.g=g;sg.t=t;g.visible=false;scene.add(g)});
+function fitTex(sg){const im=sg.t.image;if(!im||!im.width||sg.fit)return;sg.fit=1;const ar=im.width/im.height,pa=PW/PH;sg.rx=ar>pa?pa/ar:1;sg.ry=ar>pa?1:ar/pa}
+// ---------- KHABRI: original robot reporter (white shell, red headphones, cyan screen eyes, hover jet)
+const bot=new THREE.Group();bot.scale.setScalar(.8);scene.add(bot);
+const white=std(0xf4f6fb,{r:.28}),red=std(0xe63946,{r:.35}),dark=std(0x1c2233,{r:.5});
+const torso=mesh(new THREE.SphereGeometry(1,32,24),white,0,0,0);torso.scale.set(.95,1.05,.85);bot.add(torso);
+const belt=mesh(new THREE.TorusGeometry(.93,.07,12,48),red,0,-.15,0);belt.rotation.x=Math.PI/2;belt.scale.set(1,.9,1);bot.add(belt);
+const [badgeT]=ctex(128,128,(g)=>{g.fillStyle='#e63946';g.beginPath();g.arc(64,64,62,0,7);g.fill();g.fillStyle='#fff';g.font='bold 62px Poppins';g.textAlign='center';g.textBaseline='middle';g.fillText('60',64,68)});
+const badge=mesh(new THREE.CircleGeometry(.32,32),new THREE.MeshBasicMaterial({map:badgeT}),0,.25,.86);bot.add(badge);
+const headG=new THREE.Group();headG.position.y=1.55;bot.add(headG);
+headG.add(mesh(new RoundedBoxGeometry(1.9,1.4,1.3,6,.32),white));
+const [faceT,faceC,faceG]=ctex(320,220,()=>{});
+const face=mesh(new RoundedBoxGeometry(1.6,1.08,.06,4,.2),new THREE.MeshBasicMaterial({map:faceT}),0,-.02,.63);headG.add(face);
+function drawFace(t,talk,mood){const g=faceG;g.fillStyle='#0b1020';g.fillRect(0,0,320,220);
+  const blink=(t%3.7)<.12?0.15:1;g.fillStyle='#3ef0ff';g.shadowColor='#3ef0ff';g.shadowBlur=18;
+  const eh=(mood==='wow'?62:50)*blink, ew=mood==='wow'?52:46;
+  [[100,90],[220,90]].forEach(([x,y])=>{g.beginPath();g.roundRect(x-ew/2,y-eh/2,ew,eh,18);g.fill()});
+  if(mood==='happy'){g.fillStyle='#0b1020';g.shadowBlur=0;[[100,90],[220,90]].forEach(([x,y])=>{g.beginPath();g.arc(x,y+30,30,0,7);g.fill()})}
+  g.shadowBlur=14;g.fillStyle='#3ef0ff';const mo=talk?(Math.abs(Math.sin(t*17))*22+6):6;g.beginPath();g.roundRect(160-34,160-mo/2,68,mo,mo/2);g.fill();faceT.needsUpdate=true}
+[-1,1].forEach(s=>{const cup=mesh(new THREE.CylinderGeometry(.34,.34,.24,28),red,s*1.02,0,0);cup.rotation.z=Math.PI/2;headG.add(cup)});
+const band=mesh(new THREE.TorusGeometry(1.06,.08,12,40,Math.PI),red,0,0,0);headG.add(band);
+headG.add(mesh(new THREE.CylinderGeometry(.04,.04,.6,8),dark,.55,1.0,0));
+const ant=mesh(new THREE.SphereGeometry(.13,16,12),std(0xff2d3d,{e:0xff2d3d,ei:1.5}),.55,1.35,0);headG.add(ant);
+const armL=new THREE.Group(),armR=new THREE.Group();armL.position.set(-.95,.35,0);armR.position.set(.95,.35,0);bot.add(armL,armR);
+armL.add(mesh(new THREE.CapsuleGeometry(.17,.7,6,12),white,0,-.45,0),mesh(new THREE.SphereGeometry(.22,16,12),red,0,-.95,0));
+armR.add(mesh(new THREE.CapsuleGeometry(.17,.7,6,12),white,0,-.45,0),mesh(new THREE.SphereGeometry(.22,16,12),red,0,-.95,0));
+const mic=new THREE.Group();mic.position.set(0,-1.05,.15);armR.add(mic);
+mic.add(mesh(new THREE.CylinderGeometry(.07,.09,.75,12),dark,0,.25,0),mesh(new THREE.SphereGeometry(.17,16,12),std(0x8a93a8,{m:.6,r:.3}),0,.68,0));
+const [flagT]=ctex(128,64,(g)=>{g.fillStyle='#e63946';g.fillRect(0,0,128,64);g.fillStyle='#fff';g.font='bold 30px Poppins';g.textAlign='center';g.textBaseline='middle';g.fillText('60 SEC',64,34)});
+const flag=mesh(new THREE.BoxGeometry(.42,.22,.22),[std(0xe63946),std(0xe63946),std(0xe63946),std(0xe63946),new THREE.MeshBasicMaterial({map:flagT}),new THREE.MeshBasicMaterial({map:flagT})],0,.4,0);mic.add(flag);
+const jet=mesh(new THREE.ConeGeometry(.42,1.3,20,1,true),new THREE.MeshBasicMaterial({color:0x3ef0ff,transparent:true,opacity:.75,side:THREE.DoubleSide}),0,-1.55,0);jet.rotation.x=Math.PI;bot.add(jet);
+const jet2=mesh(new THREE.ConeGeometry(.22,.8,16,1,true),new THREE.MeshBasicMaterial({color:0xffffff,transparent:true,opacity:.9}),0,-1.3,0);jet2.rotation.x=Math.PI;bot.add(jet2);
+const jetL=new THREE.PointLight(0x3ef0ff,8,5);jetL.position.y=-1.6;bot.add(jetL);
+bot.add(mesh(new THREE.CylinderGeometry(.5,.36,.3,24),dark,0,-1.0,0));
+// ---------- motion
+const ease=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2, cl=x=>Math.min(1,Math.max(0,x));
+// host positions cycle: left-front, right-back, centre-close, right-front, left-back, centre-high
+const POS=[[1.05,-1.5,1.6],[-1.0,-0.8,-0.8],[1.15,-1.9,2.4],[0.1,-0.5,-1.4],[1.2,-1.1,0.8],[-0.95,-1.6,1.4]];
+function botPos(t){const caps=N.caps;let k=caps.findIndex(c=>t<c.e);if(k<0)k=caps.length-1;
+  const a=POS[(k+POS.length-1)%POS.length],b=POS[k%POS.length];const s=k===0?1:ease(cl((t-caps[k].s)/.55));
+  return [a[0]+(b[0]-a[0])*s,a[1]+(b[1]-a[1])*s+Math.sin(s*Math.PI)*0.9,a[2]+(b[2]-a[2])*s,k];}
+window.renderFrame=(t)=>{
+  const T=N.T;document.getElementById('prog').style.width=(100*t/T)+'%';
+  // intro: fly in from far back + spin
+  let [x,y,z,k]=botPos(t);const intro=ease(cl(t/1.0));
+  x=x*intro+(1-intro)*0;y=y*intro+(1-intro)*3.5;z=z*intro+(1-intro)*-12;
+  const [x2,y2,z2]=botPos(t+1/30);
+  const vx=(x2-x)*30,vz=(z2-z)*30;
+  bot.position.set(x,y+Math.sin(t*3.1)*.14,z);
+  bot.rotation.z=-vx*.06+Math.sin(t*1.7)*.05;bot.rotation.x=vz*.03;
+  bot.rotation.y=(1-intro)*Math.PI*2+Math.sin(t*1.1)*.35-x*.12;
+  const cap=N.caps[k];const talk=t>=cap.s&&t<cap.e-.15&&t>.5;
+  const mood=cap.stat?'wow':(k===N.caps.length-1?'happy':'');
+  drawFace(t,talk,mood);
+  headG.rotation.y=Math.sin(t*2.3)*.18;headG.rotation.z=Math.sin(t*1.6)*.06;
+  armR.rotation.z=.25+Math.sin(t*4)*.05;armR.rotation.x=-1.0+Math.sin(t*5)*.08;
+  armL.rotation.z=(k===N.caps.length-1)?-2.6+Math.sin(t*12)*.3:(talk?-.3-Math.abs(Math.sin(t*4.5))*.5:-.15);
+  const fl=.85+Math.sin(t*41)*.1+Math.sin(t*23)*.08;jet.scale.set(1,fl+Math.abs(vz)*.05,1);jet2.scale.set(1,fl,1);jetL.intensity=7+fl*3;
+  ant.material.emissiveIntensity=1+Math.sin(t*8)*.8;
+  // photo panels: fast whoosh in from right with spin, out to left
+  segs.forEach((sg,i)=>{fitTex(sg);const g=sg.g;const a=cl((t-(sg.s-.05))/.38),o=i<segs.length-1?cl((t-(sg.e-.12))/.32):0;
+    g.visible=t>=sg.s-.05&&(i===segs.length-1||t<sg.e+.25);if(!g.visible)return;
+    const ia=ease(a),io=ease(o);
+    g.position.set(9*(1-ia)-9*io,2.55+(1-ia)*1.2+Math.sin(t*1.3)*.06,-2.2-(1-ia)*3);
+    g.rotation.set(-.06,(1-ia)*-1.2+io*1.2+Math.sin(t*.9)*.05,(1-ia)*.25-io*.2);
+    const lt=t-sg.s,d=Math.max(.6,sg.e-sg.s),z=1/(1+.12*cl(lt/d));const rx=(sg.rx||1)*z,ry=(sg.ry||1)*z;
+    sg.t.repeat.set(rx,ry);sg.t.offset.set((1-rx)*(.5+.4*Math.sin(i*1.7)*cl(lt/d)),(1-ry)*.5)});
+  // camera: punch-in on every caption, shake
+  const cs=t-cap.s;const punch=cs<.3?Math.sin(cl(cs/.3)*Math.PI)*.9:0;
+  cam.position.set(Math.sin(t*.7)*.25+Math.sin(t*13)*.015*(punch>0),1.2+Math.sin(t*.5)*.15,11.5-punch-(cap.stat?.6:0));
+  cam.lookAt(0,1.05,0);
+  grid.position.z=(t*6)%1;
+  streaks.forEach(m=>{const u=m.userData;let zz=((u.z0+t*u.sp)%40)-30;m.position.set(u.x,u.y,zz)});
+  blobs.forEach((b,i)=>{b.position.x+=0;b.material.opacity=.18+.08*Math.sin(t*1.2+i)});
+  // overlays
+  const c=document.getElementById('cap');
+  if(c.dataset.k!=String(k)){c.dataset.k=k;c.innerHTML=cap.html.split(' ').map(w=>'<span>'+w+'</span>').join(' ').replace(/<span><b>/g,'<b><span>').replace(/<\/b><\/span>/g,'</span></b>')}
+  const sp=c.querySelectorAll('span');const dur=Math.max(.5,cap.e-cap.s);
+  sp.forEach((s,i)=>{const at=cap.s+dur*.85*i/sp.length;const q=cl((t-at)/.12);s.style.opacity=q;s.style.transform=`translateY(${(1-q)*24}px) scale(${1+.25*(1-q)})`});
+  const kk=document.getElementById('kicker');kk.textContent=cap.kicker||'';kk.style.display=cap.kicker?'block':'none';
+  const kq=ease(cl(cs/.25));kk.style.transform=`translateX(${(1-kq)*-400}px)`;
+  const st=document.getElementById('stat');st.textContent=cap.stat||'';
+  const sq=cl(cs/.3);st.style.transform=`scale(${cap.stat?(sq<1?.3+.9*sq+.3*Math.sin(sq*Math.PI):1):0})`;
+  document.getElementById('tx').style.left=(140-((t*120)%2400))+'px';
+  renderer.render(scene,cam);
+};
+const wait=()=>{const ok=segs.every(s=>s.t.image&&s.t.image.width);if(ok){window.READY=true}else setTimeout(wait,100)};wait();
+</script></body></html>
