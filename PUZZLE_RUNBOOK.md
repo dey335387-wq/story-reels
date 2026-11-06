@@ -13,12 +13,21 @@ Time chosen from Metricool best-time data (FB peak ~10-12): 12:30 PM IST daily, 
 Rules: puzzle must be logically airtight (re-check the answer step by step before rendering), clean
 (no gore/horror/politics), original wording (no copy-paste from other creators); vary type every day.
 
-## Visuals
-Same procedural ink-wash animation kit (tools/inkanim.py, see tools/sample_inkanim.py) but BRIGHTER,
-non-scary: warm paper, ink drawings of rooms/objects/clocks/people (from behind or side, no faces), red
-accent for clues, a "?" ink splash. HUD tag "DIMAAG LAGAO". Countdown numbers big in the centre.
-Write tools/anim_puz_<date>.py per episode. Music: tools/bgm.py is horror-ish — for puzzles use a light
-ticking bed instead (ffmpeg sine ticks / soft pad), ducked under voice, -14 LUFS.
+## Visuals — 3D VOXEL style with the SAME host character every episode (owner request 2026-11-06)
+- Base: tools/v3d/scene.html + tools/v3d/render.js (Three.js via headless Chromium; see tools/v3d/README.md for
+  getting three.js from GitHub — npm is blocked). Copy scene.html to tools/v3d/puz_<date>.html per episode and
+  change only the room props / cards / captions / timeline for that puzzle.
+- CHARACTER BIBLE "CHOTU" (never change): voxel kid; head 1.5 cube, skin #f2c29a; face texture = dark square
+  eyes, black ROUND GLASSES, pink cheeks, small dark-red smile; ORANGE beanie #ff7a1a with darker band #e8620e
+  and small YELLOW pom cube #ffd23f on top; TEAL hoodie #1fb5a8 with white chest patch; navy trousers #2d3a8c;
+  white shoes. Same proportions/geometry as in scene.html (copy the kid block verbatim). He is the quiz host:
+  waves at the start, does the hand-on-chin "thinking" pose during the countdown, celebrates at the end.
+- Keep the visual identity: cozy purple room / colourful voxel cubes / floating chat cards / big yellow 3D "?" /
+  yellow countdown top-right / orange "DIMAAG LAGAO" tag. Rooms/props can change per puzzle (kitchen, street,
+  classroom...) but Chotu stays identical.
+- Render ~0.6 s per frame (30 s video ≈ 9-10 min): render 4-5 test frames first, look, then full render.
+- Captions are HTML overlays inside scene (#cap), timed from tools/align.py SRT.
+- Music: light ticking bed + pops (see how the sample was made: synthesized in numpy), ducked under voice.
 
 ## Steps
 Lock locks/puz-YYYY-MM-DD → Gemini Charon voice (style prompt: "curious, energetic Indian quiz host,
