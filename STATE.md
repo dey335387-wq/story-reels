@@ -2,7 +2,8 @@
 # No series, no parts, no "to be continued". 13vi Manzil P4 is NOT made. Log each story below under "Standalone stories".
 
 ## Standalone stories (log: date slot | title | setting | twist | IG/FB links)
-- (none yet; first one 2026-11-06 pm)
+- 2026-11-06 pm | DO CHAI | highway dhaba NH-48, 3 AM, man driving alone | bill says '2 chai'; owner: 2nd is for the one on your back seat; car empty; 20 km later someone sips tea behind him, mirror: hot kulhad on back seat + long-haired woman with red eyes: "Chai acchi thi... ab ghar chalein?" | IG https://www.instagram.com/reel/DfZwqFekzyW/ (published 19:25 IST) | FB Metricool 418962440 scheduled 19:31 IST (PENDING at post time). tools/anim_s1chai.py (ink-wash anim, 35.4 s incl. end card, voice atempo 1.1), vidIQ upload b5843628-1ac6-45b3-a8ea-0bc38439412a.
+- NEXT (2026-11-07 am): brand-new standalone story, NOT dhaba/highway/car/lift/train/CCTV. Ideas: PG room wrong-number call, hostel roll-call, village well, night-shift hospital ward. Note: full render took ~25 min — start early.
 
 # Story state
 
