@@ -3,20 +3,30 @@
 Owner asked (2026-11-05): a 3rd daily Reel, NOT horror — suspense / sawal-jawab that makes viewers think.
 Time chosen from Metricool best-time data (FB peak ~10-12): 12:30 PM IST daily, on IG + FB.
 
-## Format from 2026-11-07 — "SOCHO TUM..." survival / decision scenarios (owner reference 2026-11-06: an
-"Imagine you wake up..." Reel with a DAY / time / floor HUD; we take the FORMAT only — never copy that
-creator's character, art, script or story)
-- 2nd-person scenario: "Socho, tum raat 3:12 baje uthte ho... 9th floor... aur ..." → one strange/tense
-  situation with a clear logic clue → 3 options on cards: A / B / C → "Tum kya karoge?" → 3 s countdown →
-  the SMART answer + one-line reason (logic, safety knowledge, observation) → "Comment karo tumne kya chuna".
-- Suspense yes, horror NO (no ghosts/gore). Answer must be logically airtight and safe advice (e.g. fire:
-  touch the door first; lift stuck: press alarm, don't pry doors; lost in forest: stay put...) or a clever
-  observation clue hidden in the scene (clock, floor number, shadow, footprints).
-- Episodes are standalone. Each new day = new scenario + new HUD: "DAY <n>  <time>  <place>".
-- Length 25-30 s max. The scenario hook + HUD must be on screen in the FIRST second; voice starts
-  immediately with "Socho...". Captions big, key word yellow.
-- Host stays CHOTU (see Character Bible): Chotu is the "tum" in the scenario — he wakes up / walks into the
-  situation, looks around, scratches head at the options, celebrates or facepalms at the answer.
+## Format from 2026-11-07 — "SOCHO TUM..." choose-your-move scenarios (owner reference Reel, studied
+2026-11-06, notes in puzzles/REFERENCE.md). Take the FORMAT only — never copy that creator's characters,
+art, story or lines. Standalone episodes (no "part 2" — owner rule: no series).
+STRUCTURE (45-60 s):
+1. HOOK 0-5 s: "Socho, tum raat 3 baje uthte ho... aur <one concrete alarming fact with a number>."
+   Short fragments: "Teeis missed calls. Sab Maa ke." Chotu wakes up on screen at frame 1.
+2. SETUP 5-25 s: a person/situation pulls you in fast + ONE clear RULE card ("Rule: darwaza 24 ghante band
+   rahega. Koi bhi knock kare.") — rules create stakes.
+3. TWIST 25-40 s: one discovery that changes everything (date on a map, a second shadow, a message) — an
+   open question ("Use pehle se pata tha.").
+4. DILEMMA 40-52 s: time math on screen ("6 minute door. 8 minute bache.") → two cards
+   [A] red / [B] green, "Tum kya karoge? A ya B?" 3 s countdown.
+5. ENDING: EITHER (a) a moral dilemma left open → "Comment karo A ya B — kal ka episode tumhare jawab se
+   alag hoga nahi, naya hoga" (no reveal), OR (b) a logic/safety scenario with one correct answer → reveal
+   + one-line reason. Alternate a/b day by day. Always end with "Comment karo: A ya B?".
+SCRIPT STYLE: pure 2nd person present tense ("tum dekhte ho", "tumhara phone bajta hai"), very short
+sentences and fragments, numbers everywhere, 1-2 other characters with their own short lines
+(make a 2nd .gtts with another Gemini voice, e.g. Kore/Puck/Fenrir, and mix it in), no horror/gore.
+SCREEN: HUD top-left (red dot DAY n, big clock that ADVANCES during the video, place/floor that changes
+with location) + urgency counter top-right ticking down; captions bottom, bold caps, key words yellow;
+rule cards; A/B choice cards red/green. SOUND: low pulsing drone rising in tempo, UI pings, knocks,
+footsteps, alarm tones (all synthesized).
+- Host stays CHOTU (Character Bible) = "tum". Scenes can change (bedroom → stairs → basement…) by
+  swapping room props/colours in puz.html; camera pans down between locations.
 
 ## Visuals — 3D VOXEL style with the SAME host character every episode (owner request 2026-11-06)
 - Base: tools/v3d/scene.html + tools/v3d/render.js (Three.js via headless Chromium; see tools/v3d/README.md for
