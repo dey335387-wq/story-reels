@@ -12,12 +12,17 @@ Owner wants 2 original Hinglish horror/suspense story Reels per day, posted auto
 - Else create locks/<slot>, commit, push. If the push is rejected (someone else pushed first),
   git pull and re-check: if locks/<slot> now exists from the other run, STOP.
 
-## 1. Pick the next episode
-- Continue the current series in STATE.md. Owner did NOT like "Camera 4" much: it is closed after
-  Part 3; do not continue it. After a series ends, start a NEW original
-  series (3-5 parts), never reuse plots from other creators.
-- Each part: 25-35 sec, hook in first 2 sec, cliffhanger ending (last part: final twist).
-- Write ~8-10 Hindi (Devanagari) narration lines, each with an [emotion] tag.
+## 1. Pick the next episode — STANDALONE STORIES ONLY (owner rule from 2026-11-06 evening)
+- NO SERIES, NO PARTS. Owner analysed IG/FB: viewers don't get the context of multi-part stories.
+  Every Reel = ONE complete horror/suspense story with beginning, twist and ending in the same video.
+  The next Reel is always a brand-new story (new characters, new setting). Never "part-N", never
+  "TO BE CONTINUED", never refer to earlier videos.
+- Must be understandable by anyone scrolling in cold: who + where in the first 2-3 s, one clear
+  scary situation, one twist, a satisfying (creepy) last line. 25-35 sec.
+- Hook in first 2 sec = a concrete shocking detail. Original stories only, relatable Indian settings
+  (hostel, train, village, night shift, wrong-number call, PG room, highway dhaba...). Check the
+  story log in STATE.md so settings/twists don't repeat.
+- End card: story title + "THE END...?" (or just title), plus "Follow for a new story every day".
 
 ## 2. Voice (free, Google Gemini via GitHub Actions)
 - Create inbox/<id>.gtts : line1 `Charon`, line2 style prompt (fast, tense horror narrator,
@@ -33,7 +38,7 @@ Owner wants 2 original Hinglish horror/suspense story Reels per day, posted auto
 - For each episode write tools/anim_<id>.py based on sample_inkanim.py: 4-6 animated scenes matching the
   script beats (new backgrounds per setting: corridor, lift panel, stairwell, room, train...), camera
   push-ins, moving hair/dupatta, flicker; captions = Roman Hinglish phrases timed from tools/align.py SRT
-  (wrap ~18 chars, hot words red), end card "TO BE CONTINUED... / PART N ..." (finale: "THE END...?").
+  (wrap ~18 chars, hot words red), end card "<TITLE> / THE END...?" (never "to be continued").
 - Faces: keep people seen from behind / in shadow / hair over face (code-drawn faces look bad).
 - Speed: ~15 s render per 1 s video; render frames first, look, then full render.
 - Music: tools/bgm.py as before.
@@ -65,7 +70,7 @@ Owner wants 2 original Hinglish horror/suspense story Reels per day, posted auto
 - Copy to out/<id>.mp4, commit, push. vidiq_video_upload(url=
   https://raw.githubusercontent.com/dey335387-wq/story-reels/main/out/<id>.mp4)
 - vidiq_instagram_publish_reel(platformAccountId=29346910844996715, videoUrl=<returned>,
-  caption="<Series> 🌑 part-N | <hook line> #horrorstory #hindistory #scarystories #explore #reelsgrowth"),
+  caption="<Story title> 🌑 | <hook line> #horrorstory #hindistory #scarystories #explore #reelsgrowth"),
   continue with containerId until PUBLISHED. Never publish the same episode twice:
   check STATE.md first; if a step fails, stop and report, don't retry blindly.
 - Facebook (same video): right after the Instagram Reel is PUBLISHED, call Metricool
@@ -73,7 +78,7 @@ Owner wants 2 original Hinglish horror/suspense story Reels per day, posted auto
   {"autoPublish":true,"draft":false,"descendants":[],"firstCommentText":"","hasNotReadNotes":false,
    "shortener":false,"smartLinkData":{"ids":[]},"mediaAltText":[],"media":[<vidIQ videoUrl>],
    "providers":[{"network":"facebook"}],"publicationDate":{"dateTime":"<same time>","timezone":"Asia/Calcutta"},
-   "text":"<caption>","facebookData":{"type":"REEL","title":"<Series> part-N"}}
+   "text":"<caption>","facebookData":{"type":"REEL","title":"<Story title>"}}
   If it errors, report it; the Instagram post still counts.
 - git rm out/<id>.mp4; update STATE.md (episode summary, permalink, date); commit + push.
 - Report the permalink to the owner.
