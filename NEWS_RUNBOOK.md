@@ -26,7 +26,7 @@ youtubeData UCwHbpK7mj-_e857StojX76w), published at 18:30 IST, style like Indian
   topic label like "SPORTS", "DUNIYA", "TECH"), hot words, a stat when there is a number.
 - Research: ~15 searches; every story confirmed by 2+ reliable sources; write all facts + URLs into
   news/YYYY-MM-DD.md. Description: one line per story + all sources + photo credits.
-- Script ≈ 200-230 Hindi words; .img file with one or two queries per story (6-10 lines).
+- Script ≈ 300-340 Hindi words (Charon after align.py speaks ~7 words/s: 2026-11-06 had ~150 words = 41 s, too short); 6 stories, 3 lines each; .img file with one or two queries per story (6-10 lines).
 - Title like "Aaj ki 6 badi khabrein: <top headline> | 6 Nov #shorts".
 - Render is ~0.55 s/frame → 90 s ≈ 25 min: start research at 17:30 sharp, voice+images by ~17:50,
   render by ~18:20 at the latest (Metricool publishes 18:30; if late, schedule a few minutes later
