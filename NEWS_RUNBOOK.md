@@ -3,7 +3,7 @@ On-screen brand: "60 SEC KHABAR" (owner said choose any name). Put it in story.j
 
 Owner wants 1 Hinglish daily-news Short per day on their new YouTube channel (Metricool brand 7813457,
 youtubeData UCwHbpK7mj-_e857StojX76w), published at 18:30 IST, style like Indian explainer creators
-(e.g. Neon Man): one big story explained simply. Shorts only (vertical, 60-90 s). 0 vidIQ credits.
+(e.g. Neon Man). Shorts only (vertical, 75-90 s). From 2026-11-06: 5-6 stories per Short (see FORMAT). 0 vidIQ credits.
 
 ## Rules (non-negotiable)
 - Facts only from WebSearch/WebFetch done in this run; every key fact confirmed by 2+ reliable sources
@@ -15,6 +15,22 @@ youtubeData UCwHbpK7mj-_e857StojX76w), published at 18:30 IST, style like Indian
   building, object, map instead and put the name in text. No news-agency/TV images. Look at every
   downloaded photo (Read) before using; drop any that shows a public figure or is off-topic/low quality.
 - Every Short different: vary story type, hook, colours of kicker, photo order. No copy-paste scripts.
+
+## FORMAT from 2026-11-06 (owner request): "din ki 5-6 sabse zaroori khabrein" in ONE Short
+- Every Short = a daily bulletin of the 5-6 most important stories of the day (mix: India, world,
+  sports, tech/science, business/utility news that affects people; no rumours). NOT one big story.
+- Length 75-90 s. Hook (≈4 s): "Aaj ki 6 sabse badi khabrein, 60 second mein!" + the most shocking
+  headline as a tease. Then each story ≈ 11-13 s = 2 short lines (kya hua + kyun matter karta hai /
+  number). Outro (≈4 s): "Kal phir milte hain, follow karo 60 SEC KHABAR."
+- Each story: its own photo (free-license, no public figures), kicker "KHABAR 1/6", "2/6"... (or
+  topic label like "SPORTS", "DUNIYA", "TECH"), hot words, a stat when there is a number.
+- Research: ~15 searches; every story confirmed by 2+ reliable sources; write all facts + URLs into
+  news/YYYY-MM-DD.md. Description: one line per story + all sources + photo credits.
+- Script ≈ 200-230 Hindi words; .img file with one or two queries per story (6-10 lines).
+- Title like "Aaj ki 6 badi khabrein: <top headline> | 6 Nov #shorts".
+- Render is ~0.55 s/frame → 90 s ≈ 25 min: start research at 17:30 sharp, voice+images by ~17:50,
+  render by ~18:20 at the latest (Metricool publishes 18:30; if late, schedule a few minutes later
+  rather than skipping).
 
 ## STYLE from 2026-11-06 (owner request): 3D host character + FAST motion graphics
 Owner: news Shorts need their OWN consistent character (different from Chotu), fast-moving motion
