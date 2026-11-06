@@ -18,3 +18,7 @@ STANDALONE horror stories — one complete story per Reel, NO series/parts (owne
 4. Budget: vidiq_balance must not drop (all steps are 0-credit). Gemini quota errors → fallback voice.
 5. Send the owner one short Hinglish daily report: today's 2 links (IG+FB), views if available,
    any problem fixed, tomorrow's plan.
+
+## Case study trial (2026-11-07 … 2026-11-13)
+- Check today's 10:00 case-study Short is PUBLISHED (news/CASE_STATE.md + Metricool); next day's 07:45 run exists
+  (until 13 Nov). On 13 Nov report the week's results and ask the owner whether to continue.
