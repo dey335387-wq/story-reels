@@ -142,7 +142,7 @@ window.renderFrame=(t)=>{
   sp.forEach((s,i)=>{const at=cap.s+dur*.85*i/sp.length;const q=cl((t-at)/.12);s.style.opacity=q;s.style.transform=`translateY(${(1-q)*24}px) scale(${1+.25*(1-q)})`});
   const kk=document.getElementById('kicker');kk.textContent=cap.kicker||'';kk.style.display=cap.kicker?'block':'none';
   const kq=ease(cl(cs/.25));kk.style.transform=`translateX(${(1-kq)*-400}px)`;
-  const st=document.getElementById('stat');st.textContent=cap.stat||'';
+  const st=document.getElementById('stat');st.textContent=cap.stat||'';st.style.fontSize=((cap.stat||'').length>6?118:170)+'px';
   const sq=cl(cs/.3);st.style.transform=`scale(${cap.stat?(sq<1?.3+.9*sq+.3*Math.sin(sq*Math.PI):1):0})`;
   document.getElementById('tx').style.left=(140-((t*120)%2400))+'px';
   renderer.render(scene,cam);
