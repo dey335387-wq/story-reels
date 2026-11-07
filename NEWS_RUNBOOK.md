@@ -79,3 +79,14 @@ graphics, and the character must never just stand — it flies up/down/forward/b
    text = description: 2-line summary + "Sources:" URLs + photo credits from credits.txt + #shorts.
 8. After 18:30 confirm PUBLISHED via getScheduledPosts; record in news/STATE.md (date, title, YouTube URL).
    Remove the mp4 from out/, push. Send owner the link in Hinglish.
+
+## YouTube publishing route (from 2026-11-08): YouTube Data API via GitHub Actions — FREE, no Metricool
+- Push out/<id>.mp4 together with inbox/<id>.yt (JSON):
+  {"file":"out/<id>.mp4","title":"...","description":"...","tags":[...],"categoryId":"25" (news) / "27" (education),
+   "publishAt":"YYYY-MM-DDTHH:MM:00Z"}   (UTC! 18:30 IST = 13:00Z, 10:00 IST = 04:30Z; omit publishAt = public now)
+- The Action (media.yml → tools/yt_upload.py, secrets YT_CLIENT_ID / YT_CLIENT_SECRET / YT_REFRESH_TOKEN) uploads it
+  as private+scheduled; result in media/yt/<id>.json (videoId, url). Then git rm the mp4.
+- Test on 2026-11-08 00:20 IST: private upload OK (tp5FFSuc7A8).
+- If media/yt/<id>.json has an error (token expired = "invalid_grant"): fall back to Metricool and tell the owner
+  to renew the refresh token (OAuth app is in Testing mode → token lasts ~7 days; first token 2026-11-08, renew by 2026-11-14).
+- Metricool is now only the fallback (free plan 20 posts/month).
