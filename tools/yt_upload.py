@@ -11,7 +11,7 @@ tok = requests.post("https://oauth2.googleapis.com/token", data={
 if "access_token" not in tok:
     json.dump({"error": tok}, open(out, "w")); print("token error", tok); sys.exit(1)
 H = {"Authorization": "Bearer " + tok["access_token"]}
-status = {"privacyStatus": "private" if job.get("publishAt") else "public", "selfDeclaredMadeForKids": False}
+status = {"privacyStatus": job.get("privacy") or ("private" if job.get("publishAt") else "public"), "selfDeclaredMadeForKids": False}
 if job.get("publishAt"): status["publishAt"] = job["publishAt"]
 meta = {"snippet": {"title": job["title"][:100], "description": job.get("description", "")[:4900],
                     "tags": job.get("tags", []), "categoryId": job.get("categoryId", "25")}, "status": status}
