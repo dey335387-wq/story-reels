@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: '3.12' }
-      - run: pip install -q edge-tts && sudo apt-get install -y -qq ffmpeg >/dev/null
+      - run: pip install -q edge-tts requests && sudo apt-get install -y -qq ffmpeg >/dev/null
       - name: Process inbox
         run: |
           shopt -s nullglob
@@ -66,6 +66,19 @@ jobs:
           for f in inbox/*.pimg; do
             n=$(basename "$f" .pimg)
             python tools/free_image.py "$f" "media/pimg/$n" || true
+            git rm -q "$f"
+          done
+      - name: YouTube upload (Data API, free)
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: |
+          shopt -s nullglob
+          mkdir -p media/yt
+          for f in inbox/*.yt; do
+            n=$(basename "$f" .yt)
+            python tools/yt_upload.py "$f" "media/yt/$n.json" || true
             git rm -q "$f"
           done
       - name: Commit
