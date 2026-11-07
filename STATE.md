@@ -10,6 +10,10 @@
 ## Facebook route (2026-11-07)
 - Metricool free plan = 20 posts/month and nearly used up. Owner asked to switch on Instagram → Facebook auto-share for Reels (Accounts Center). Until a morning watchdog confirms Reels appear on the FB Page by themselves, keep using Metricool for FB only while it accepts posts.
 
+## Manager notes (2026-11-07)
+- HAAZRI: 2,146 views, 33% watched, skip 27.5%, 4 shares — NEW BEST. Hook = a number contradiction on paper ("30 naam, present 31 baar"). Do this every time: a written/visible impossible number in the first 2 s.
+- GALLERY: 164 in 3 h, 19% watched, skip 46% — weaker (phone-in-phone framing is small/dark; first image not instantly scary). Next: full-screen scary proof image in frame 1, bigger captions.
+- Do Chai: 223, 28%.
 ## Manager notes (2026-11-06)
 - 13vi Manzil P3 (first procedural ink-wash ANIMATION): 1,595 views, 41% watched, skip 31% — BEST EVER (10x). Animation style works; keep it.
 - Do Chai (first standalone): 168 views in 3 h, 27% watched, skip 44%. Fine start.

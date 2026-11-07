@@ -10,3 +10,6 @@
   ("Sirf 1% log solve karte hain: ..."), countdown 3 s instead of 5, answer short. Simpler, more visual puzzles.
 - 2026-11-07 | FIRST "Socho tum..." scenario (DAY 2, logic/safety type) | 2:40 AM, 14th floor, smoke; fire on 12th; RULE card "dhuan upar jaata hai, neeche jhuk ke chalo"; neighbour Sharma uncle (Puck voice): "Lift chal rahi hai!"; handle is HOT | A: open door, lift down / B: keep door shut, wet towel, call 101 → answer B (hot handle = fire/hot smoke behind door; never use lifts in a fire; towel under door, call 101, signal from window) | 60.4 s, tools/v3d/puz2.html + ep.js (HUD, rule card, A/B cards, smoke, alarm light, door/handle, towel) | IG https://www.instagram.com/reel/DfbkAy3EaJR/ (12:14 IST) | FB https://facebook.com/reel/1487514286924371 (PUBLISHED 12:20)
   Next (2026-11-08, DAY 3): OPEN moral dilemma type (no single right answer), different place (not fire/building). Render took ~30 min at 1 fps — start early.
+
+## Manager notes (2026-11-07)
+- "Socho tum" fire episode: 330 views in 10 h (2x the old riddle), 21% watched, skip 47%, 1 comment. Format is better; first seconds still lose half. Next: start ON the danger (smoke + HUD + "Socho..." line under 1 s), keep 45-50 s.
