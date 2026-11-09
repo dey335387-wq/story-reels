@@ -22,3 +22,4 @@ STANDALONE horror stories — one complete story per Reel, NO series/parts (owne
 ## Case study trial (2026-11-07 … 2026-11-13)
 - Check today's 10:00 case-study Short is PUBLISHED (news/CASE_STATE.md + Metricool); next day's 07:45 run exists
   (until 13 Nov). On 13 Nov report the week's results and ask the owner whether to continue.
+- 2026-11-09 manager: horror am KUAN (154 views, 20% watched) + pm 41VI COPY (177 views, 33%) posted; puzzle DAY 3 dilemma 1,534 views, 9 comments (best Socho so far); news osLZnaS9boA scheduled 18:30; case study 9 Nov MISSED (outage day, trigger created after 07:45) - not posted late at night; next runs 10 Nov ok; vidIQ 18.
