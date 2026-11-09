@@ -13,3 +13,5 @@
 
 ## Manager notes (2026-11-07)
 - "Socho tum" fire episode: 330 views in 10 h (2x the old riddle), 21% watched, skip 47%, 1 comment. Format is better; first seconds still lose half. Next: start ON the danger (smoke + HUD + "Socho..." line under 1 s), keep 45-50 s.
+- 2026-11-09 | "Socho tum" DAY 3, OPEN DILEMMA | 1:10 AM, hostel, final exam 9 AM; best friend Rohit (Puck voice) stuck on highway, battery 5%; RULE: gate locked till 6 AM, caught = warden complaint; 40 km, 3 hours | A: jump gate and go / B: stay, call 112 for him, give exam → no single right answer ("dosti vs career") | 48.5 s, puz2.html flags (noSmoke/noAlarm/noHot/noTowel/open, msg) | IG https://www.instagram.com/reel/Dfgr5EGj6NC/ (11:58 IST) | FB Metricool 421414400 (12:07)
+  Next (DAY 4): logic/safety type with a clear answer, new place (not fire, not hostel).
