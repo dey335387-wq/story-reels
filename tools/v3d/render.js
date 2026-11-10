@@ -16,7 +16,7 @@ const srv = http.createServer((q, r) => {
   await p.waitForFunction('window.READY === true', null, { timeout: 60000 });
   await p.evaluate(() => document.fonts.ready);
   const ts = list ? list.split(',').map(Number) : Array.from({ length: NF }, (_, i) => i / 30);
-  for (let i = 0; i < ts.length; i++) {
+  for (let i = +(process.env.START || 0); i < ts.length; i++) {
     await p.evaluate(t => window.renderFrame(t), ts[i]);
     await p.screenshot({ path: path.join(out, list ? `f_${ts[i]}.jpg` : `f${String(i).padStart(4, '0')}.jpg`), type: 'jpeg', quality: 92 });
     if (i % 50 === 0) console.log('frame', i);
