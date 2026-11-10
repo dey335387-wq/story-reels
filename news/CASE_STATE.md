@@ -2,3 +2,5 @@
 - 2026-11-07 | IND-PAK World Cup 2027 ticket demand (34,000 seats vs ~84 lakh requests; 3 reasons: no bilateral since 2012-13, WC back in Africa after 24 yrs, ballot) | 63.5 s (the sample shown to the owner on 6 Nov) | Metricool 419608937 scheduled 10:00 IST | YouTube https://www.youtube.com/shorts/saMrZWKKcik PUBLISHED
   Next topics: NOT cricket again for a few days; try business/brand, tech, science.
 - 2026-11-08 | India = ChatGPT largest market (3 moves: cheap Go plan + 12-month free offer, Indian languages/Android-first, UPI; money via ads) | 62.7 s | FIRST upload via YouTube Data API: https://www.youtube.com/shorts/GlrY0gqsKqM (private, publishAt 04:30Z = 10:00 IST) | watchdog 10:20 confirms it went public
+- 2026-11-10 | Quick commerce / dark stores ("10 minute mein iPhone kaise?": iPhone 18 Pro ~10-min claim, BigBasket 300+ first hour; ~7,800 dark stores 2-3 km away; users 80 lakh -> 6 cr+; $9B H1 2026, $50B by 2030 est.; costly, losses, now small profits) | 62 s | YouTube API https://www.youtube.com/shorts/8BGd5MJEKuM (publishAt 04:30Z = 10:00 IST)
+  Next topics: science/tech or brand story; not cricket, not quick commerce/AI again soon.
