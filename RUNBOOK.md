@@ -1,3 +1,12 @@
+# !! OWNER RULE 2026-11-10 20:07 IST: NO MORE HORROR, NO LOVE STORIES. Owner: all horror stories felt the same
+# ("10 attendance, 11th kahan se aaya" — the "one extra / impossible count" twist was used again and again:
+# HAAZRI, 41VI COPY...). From the 2026-11-11 am slot every Reel = ONE UNIQUE HOOK + SUSPENSE story:
+# mystery / thriller / detective / heist / survival / con-scam / everyday-mystery with a clever, LOGICAL twist.
+# NO ghosts, spirits, curses, chudail, reflections, "extra person/count" twists, no romance. Each story must use a
+# DIFFERENT twist type than the last 5 (check the log): e.g. the narrator is the culprit, the clue was in plain
+# sight, the victim staged it, wrong assumption about time/place, the helper is the con, a misread message, etc.
+# First 2 s = a concrete, shocking-but-real hook. Still standalone, 25-35 s, ink-wash style, suspense music.
+
 # Daily Reel runbook (Instagram @story_xy_01)
 
 Owner wants 2 original Hinglish horror/suspense story Reels per day, posted automatically
