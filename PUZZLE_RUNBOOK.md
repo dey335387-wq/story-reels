@@ -1,3 +1,4 @@
+# !! OWNER 2026-11-11 23:40: Dimaag Lagao runs 2x/day: 12:30 (lock puz-YYYY-MM-DD) and 19:25 (lock puz-YYYY-MM-DD-pm). Alternate type vs the LAST entry each time.
 # "DIMAAG LAGAO" — daily brain-teaser suspense Reel (Instagram + Facebook), 12:30 PM IST
 
 Owner asked (2026-11-05): a 3rd daily Reel, NOT horror — suspense / sawal-jawab that makes viewers think.

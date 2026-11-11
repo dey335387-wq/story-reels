@@ -1,3 +1,4 @@
+# !! OWNER 2026-11-11 23:40: SUSPENSE STORIES STOPPED. Cron disabled. Morning slot = PAISA GYAAN money Reel (MONEY_RUNBOOK.md); evening slot = 2nd Dimaag Lagao (19:25).
 # !! OWNER RULE 2026-11-10 20:07 IST: NO MORE HORROR. (20:08 update: LOVE STORIES ARE OK — with a hook + suspense/twist.) Owner: all horror stories felt the same
 # ("10 attendance, 11th kahan se aaya" — the "one extra / impossible count" twist was used again and again:
 # HAAZRI, 41VI COPY...). From the 2026-11-11 am slot every Reel = ONE UNIQUE HOOK + SUSPENSE story:
