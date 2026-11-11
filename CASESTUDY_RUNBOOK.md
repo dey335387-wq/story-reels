@@ -42,3 +42,4 @@ confirms PUBLISHED and adds the link.
 - If media/yt/<id>.json has an error (token expired = "invalid_grant"): fall back to Metricool and tell the owner
   to renew the refresh token (OAuth app is in Testing mode → token lasts ~7 days; first token 2026-11-08, renew by 2026-11-14).
 - Metricool is now only the fallback (free plan 20 posts/month).
+- YouTube rejects descriptions containing "<" or ">" (e.g. "->"): use "→".
