@@ -18,3 +18,6 @@
 - 2026-11-10 | "Socho tum" DAY 4, LOGIC/SAFETY | 11:40 PM, flat kitchen, strong gas smell in the dark, light switch next to hand; msg from Maa "gas band kiya tha na?"; RULE: ek chingaari = dhamaka | A: switch light on to find leak / B: no switches, regulator off, open windows, go out and call LPG 1906 → answer B (switch makes a tiny spark) | 49 s, puz2.html flags | IG https://www.instagram.com/reel/DfjRp_-E_FC/ (12:06 IST) | FB Metricool 422778815 (12:12)
   Render got stopped by the 30-min background limit at frame 924 → resumed with START=924 (render.js), use timeout 5400000 next time.
   Next (DAY 5): OPEN moral dilemma, new place (not fire, hostel, kitchen/gas).
+- 2026-11-11 | "Socho tum" DAY 5, OPEN DILEMMA | exam hall, last board paper: best friend copying from a chit in front of you; RULE: copying caught = whole row cancelled (yours too); invigilator asks "kisi ko nakal karte dekha?" | A: tell truth (friend debarred, your paper safe) / B: stay silent (friend may escape, risk yours) → open ending, "best jawab PIN hoga" | 46 s | IG https://www.instagram.com/reel/Dfl5HQ1jyd_/ (12:29 IST) | FB Metricool 424072055 (12:35)
+  Note: set is still Chotu's room with a night window although HUD says exam hall 10:42 AM — consider a daytime/classroom variant.
+  Next (DAY 6): LOGIC/SAFETY with a clear answer, new place (not fire, hostel, kitchen/gas, exam).
