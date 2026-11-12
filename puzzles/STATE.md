@@ -21,3 +21,6 @@
 - 2026-11-11 | "Socho tum" DAY 5, OPEN DILEMMA | exam hall, last board paper: best friend copying from a chit in front of you; RULE: copying caught = whole row cancelled (yours too); invigilator asks "kisi ko nakal karte dekha?" | A: tell truth (friend debarred, your paper safe) / B: stay silent (friend may escape, risk yours) → open ending, "best jawab PIN hoga" | 46 s | IG https://www.instagram.com/reel/Dfl5HQ1jyd_/ (12:29 IST) | FB Metricool 424072055 (12:35)
   Note: set is still Chotu's room with a night window although HUD says exam hall 10:42 AM — consider a daytime/classroom variant.
   Next (DAY 6): LOGIC/SAFETY with a clear answer, new place (not fire, hostel, kitchen/gas, exam).
+- 2026-11-12 pm | DAY 6, LOGIC/SAFETY | office lift stuck between floors at 9:30 PM, gap in doors; RULE: air does not run out, danger = wrong move | A pry doors + climb out / B alarm + emergency number/112 + stay inside → B | 52.6 s | IG https://www.instagram.com/reel/DfpNgbcjI-q/ (19:25 IST) | FB Metricool 425719886 (19:30)
+  12:30 run skipped on 2026-11-12: its trigger was delivered 5h45m late (17:01 IST).
+  Next (DAY 7): OPEN dilemma, new place (not fire, hostel, kitchen, exam, lift).
