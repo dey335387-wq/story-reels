@@ -18,6 +18,6 @@ for i, (c, (s, e)) in enumerate(zip(S["caps"], cues)):
     e2 = cues[i+1][0] if i+1 < len(cues) else T
     caps.append({"s": round(s,2), "e": round(e2,2), "html": c["html"]})
     if c.get("st"): st.append({"s": round(max(0.3, s),2), **c["st"]})
-out = {"T": T, "brand": S.get("brand","PAISA GYAAN"), "ep": S.get("ep",""), "caps": caps, "st": st}
+out = {"T": T, "brand": S.get("brand","PAISA GYAAN"), "ep": S.get("ep",""), **({"note": S["note"]} if "note" in S else {}), "caps": caps, "st": st}
 open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "money_ep.js"), "w").write("window.EP=" + json.dumps(out, ensure_ascii=False) + ";\n")
 print("T", T, "frames", int(T*30), "stations", len(st))
