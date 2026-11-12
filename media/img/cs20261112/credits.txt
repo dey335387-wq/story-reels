@@ -1,0 +1,9 @@
+vendor_0.jpg | File:Street vendor's mobile stall in India.jpg | Nalbarian | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File%3AStreet_vendor%27s_mobile_stall_in_India.jpg
+vendor_1.jpg | File:India - Varanasi green peas - 2714.jpg | Jorge Royan | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File%3AIndia_-_Varanasi_green_peas_-_2714.jpg
+vendor_2.jpg | File:India - Varanasi paper bag maker - 0078.jpg | Jorge Royan | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File%3AIndia_-_Varanasi_paper_bag_maker_-_0078.jpg
+tea_0.jpg | File:Chai walli - Old woman at a Tea Stall on a highway in Pauri, Uttrakhand, India.jpg | Photopayal | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File%3AChai_walli_-_Old_woman_at_a_Tea_Stall_on_a_highway_in_Pauri%2C_Uttrakhand%2C_India.jpg
+tea_1.jpg | File:India - Varanasi chai tea - 1420.jpg | Jorge Royan | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File%3AIndia_-_Varanasi_chai_tea_-_1420.jpg
+tea_2.jpg | File:Chai (Tea) Stall.jpg | Vidurmayor | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File%3AChai_%28Tea%29_Stall.jpg
+bank_0.jpg | File:Bank of India, Mumbai main branch as viewed from right side.jpg | DesiBoy101 | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File%3ABank_of_India%2C_Mumbai_main_branch_as_viewed_from_right_side.jpg
+bank_1.jpg | File:WHS plaque of Bank of India building in Marathi.jpg | DesiBoy101 | CC BY 4.0 | https://commons.wikimedia.org/wiki/File%3AWHS_plaque_of_Bank_of_India_building_in_Marathi.jpg
+bank_2.jpg | File:Bank of India, Mumbai main branch as viewed from left side.jpg | DesiBoy101 | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File%3ABank_of_India%2C_Mumbai_main_branch_as_viewed_from_left_side.jpg
