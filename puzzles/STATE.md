@@ -24,3 +24,5 @@
 - 2026-11-12 pm | DAY 6, LOGIC/SAFETY | office lift stuck between floors at 9:30 PM, gap in doors; RULE: air does not run out, danger = wrong move | A pry doors + climb out / B alarm + emergency number/112 + stay inside → B | 52.6 s | IG https://www.instagram.com/reel/DfpNgbcjI-q/ (19:25 IST) | FB Metricool 425719886 (19:30)
   12:30 run skipped on 2026-11-12: its trigger was delivered 5h45m late (17:01 IST).
   Next (DAY 7): OPEN dilemma, new place (not fire, hostel, kitchen, exam, lift).
+- 2026-11-13 | DAY 7, OPEN DILEMMA | 10 PM bus stop, purse with ₹15,000 + ID (20 km away) + slip 'daughter's fees due tomorrow'; RULE: last bus home in 10 min | A return now, miss bus / B take home, return tomorrow, fee deadline may pass → open, asks for third option, best answer pinned | 49 s | IG https://www.instagram.com/reel/DfrCtQLDQrc/ (12:30 IST) | FB Metricool 426606307 (12:35)
+  Next (DAY 8, 19:25): LOGIC/SAFETY, new place (not fire, hostel, kitchen, exam, lift, bus stop).
