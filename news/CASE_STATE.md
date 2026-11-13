@@ -6,3 +6,5 @@
   Next topics: science/tech or brand story; not cricket, not quick commerce/AI again soon.
 - 2026-11-11 | India chess 0 → 100 GMs (1988 first; 25 by 2011; academies, Tamil Nadu ~40, 2022 Chennai Olympiad, 2024 double gold + youngest world champion, online chess; 50 by 2022; 100th Anuj Shrivatri; India #4) | 64.7 s | YouTube API https://www.youtube.com/shorts/dWCXeisG2go (publishAt 04:30Z). NOTE: YouTube rejects "<" or ">" in descriptions (invalidDescription) — never use "->".
 - 2026-11-12 | UPI: free app → Rs 1 lakh crore/day (2016 launch, 44 banks; 3 moves free/interoperable/QR; FY26 24,162 cr txn ~13,000x, 703 banks; Oct 2026 25.47 bn record, daily avg Rs 1.017 lakh cr; twist: 0.4% MDR on some P2M above Rs 2,000 deferred till after Diwali) | 60.5 s | https://www.youtube.com/shorts/1DZAtVDygLc (publishAt 04:30Z)
+- 2026-11-13 | Rupee fall (Jan ~Rs90 → record 96.47 on 19 May → 94.04 on 12 Nov; oil 88%+ imported, FPI outflows, strong dollar; RBI selling dollars; winners/losers) | 60.4 s | https://www.youtube.com/shorts/yjVrwLw0om8 (publishAt 04:30Z)
+TRIAL WEEK DONE (7-13 Nov). 9 Nov missed (outage). Asked owner whether to continue.
