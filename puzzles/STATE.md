@@ -26,3 +26,4 @@
   Next (DAY 7): OPEN dilemma, new place (not fire, hostel, kitchen, exam, lift).
 - 2026-11-13 | DAY 7, OPEN DILEMMA | 10 PM bus stop, purse with ₹15,000 + ID (20 km away) + slip 'daughter's fees due tomorrow'; RULE: last bus home in 10 min | A return now, miss bus / B take home, return tomorrow, fee deadline may pass → open, asks for third option, best answer pinned | 49 s | IG https://www.instagram.com/reel/DfrCtQLDQrc/ (12:30 IST) | FB Metricool 426606307 (12:35)
   Next (DAY 8, 19:25): LOGIC/SAFETY, new place (not fire, hostel, kitchen, exam, lift, bus stop).
+- 2026-11-13 pm | DAY 8 READY BUT NOT POSTED YET: publish trigger fired 1h12m late (20:35 IST) and vidIQ/Metricool connectors were down (502). Video out/puz20261113p.mp4 kept in repo; vidIQ uploadId 377973e4-2e11-4717-b39e-7d584d707af2. Retry at ~20:52; if it still fails, POST THIS VIDEO AS THE NEXT 12:30 SLOT instead of making a new one (then log it as DAY 8).
