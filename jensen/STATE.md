@@ -9,3 +9,4 @@
 - jh4 3D (red falling chart/arrow) done 12:40: vidIQ 0d5b97ef-..., FB Metricool 427790167 @21:02, YT inbox/jh4.yt publishAt 15:30Z, IG send_later 21:00. jh2 3D rendering (13:10 ready) -> plan 16:30.
 - jh2 3D done 12:48: vidIQ b4b8bdae-..., FB Metricool 427794079 @16:32, YT inbox/jh2.yt publishAt 11:00Z (category 22), IG send_later 16:30. 13:35 retry task still scheduled but has nothing to do (all voices done) - just ignore it. All 4 videos done; remaining: IG publishes 14:00 (jh3, use upload 2942524b), 16:30 (jh2), 21:00 (jh4).
 - jh3 PUBLISHED (3D on IG): https://www.instagram.com/reel/Dftys9lnIma/ (14:06), FB Metricool 427760364 @14:02, YT https://www.youtube.com/shorts/slQW9Fvf8ug (14:00, news style).
+- jh2 PUBLISHED: IG https://www.instagram.com/reel/DfuDNx-gMsy/ (16:31), YT https://www.youtube.com/shorts/P7WBy4MjH-0 (16:30), FB Metricool 427794079 @16:32.
