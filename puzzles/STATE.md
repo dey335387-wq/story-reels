@@ -30,3 +30,5 @@
   Next (DAY 9): OPEN dilemma, new place (not fire, hostel, kitchen, exam, lift, bus stop, railway).
 - 2026-11-14 | DAY 9, OPEN DILEMMA | 6:55 PM office, ₹50 lakh order cancelled, only you know your best friend made the mistake (his mother in hospital); RULE: no name by the 7 PM meeting = whole team's bonus cut | A tell the truth, friend may lose job / B stay silent, 10 people lose bonus → open, asks for third option, best answer pinned | 55.5 s | IG https://www.instagram.com/reel/Dftncyqj5I6/ (12:31 IST) | FB Metricool 427784332 (12:35)
   Next (DAY 10, 19:25): LOGIC/SAFETY, new place (not fire, hostel, kitchen, exam, lift, bus stop, railway, office).
+- 2026-11-14 pm | DAY 10, LOGIC/SAFETY | 8 PM house terrace, friend gets electric shock fixing water-pump wire, hand stuck; RULE: 10 s, main switch downstairs | A pull him by hand / B switch off mains or push with dry wood → B (touching = you get shocked too), then call 112 | 52 s | IG https://www.instagram.com/reel/DfuW-_WnBgO/ (19:25 IST) | FB Metricool 427987787 (19:30)
+  Next (DAY 11, 12:30): OPEN DILEMMA, new place (not fire, hostel, kitchen, exam, lift, bus stop, railway, office, terrace).
