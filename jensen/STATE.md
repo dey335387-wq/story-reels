@@ -3,3 +3,4 @@
 - jh3 ($600 -> $5T): voice ok, rendering. Plan: publish ~14:00 (swapped with jh2 because Gemini TTS free quota ran out; resets ~13:30 IST).
 - jh2 (struggle), jh4 (stock fall): .gtts waiting in inbox for TTS quota. jh4 images: reuse jh1/jh3 (Nasdaq, datacenter, hq).
 - Stock facts for jh4 (Forbes 13 Nov + Yahoo Finance 13 Nov): record close $239.24 on 6 Oct; 12 Nov close $166.19 (-4.3%, intraday >14%); 13 Nov -2%; ~30% below record; ~$1.76T value lost; AMD -8.8%, Broadcom -4.9% on 13 Nov.
+- jh3 done 09:06: FB Metricool 427704818 @14:02; YT job publishAt 08:30Z; IG send_later 14:00 (vidIQ upload 8c3eeefa-...). send_later 13:35 retries jh2/jh4 TTS.
