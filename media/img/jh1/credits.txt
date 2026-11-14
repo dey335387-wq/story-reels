@@ -1,0 +1,14 @@
+hq_0.jpg | File:NVIDIA Headquarters.jpg | Coolcaesar | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File%3ANVIDIA_Headquarters.jpg
+hq2_0.jpg | File:San Tomas Expressway at Central Expressway.jpg | Dicklyon | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File%3ASan_Tomas_Expressway_at_Central_Expressway.jpg
+gpu_0.jpg | File:Graphics Card Diamond Viper 330 with Nvidia (RIVA 128) GPU.jpg | Timothy Borkowski | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File%3AGraphics_Card_Diamond_Viper_330_with_Nvidia_%28RIVA_128%29_GPU.jpg
+gpu_1.jpg | File:NVidia G71 GPU.jpg | Diego3336 | CC BY 2.0 | https://commons.wikimedia.org/wiki/File%3ANVidia_G71_GPU.jpg
+gpu_2.jpg | File:2026-02-12 NVIDIA Quadro 400 HOF6313 RAW-Export.png | PantheraLeo1359531 | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File%3A2026-02-12_NVIDIA_Quadro_400_HOF6313_RAW-Export.png
+chip_0.jpg | File:Nvidia NV40 die shot.jpg | Martijn Boer | Public domain | https://commons.wikimedia.org/wiki/File%3ANvidia_NV40_die_shot.jpg
+chip_1.jpg | File:Nvidia NV40 die shot - 42318174572.jpg | Martijn Boer | Public domain | https://commons.wikimedia.org/wiki/File%3ANvidia_NV40_die_shot_-_42318174572.jpg
+chip_2.jpg | File:Nvidia NV40 die shot - 42318170072.jpg | Martijn Boer | Public domain | https://commons.wikimedia.org/wiki/File%3ANvidia_NV40_die_shot_-_42318170072.jpg
+wallst_0.jpg | File:New York Stock Exchange building, 20231002 171816.jpg | Jakub Hałun | CC BY 4.0 | https://commons.wikimedia.org/wiki/File%3ANew_York_Stock_Exchange_building%2C_20231002_171816.jpg
+wallst_1.jpg | File:New York Stock Exchange August 2017 04.jpg | Arild Vågen | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File%3ANew_York_Stock_Exchange_August_2017_04.jpg
+wallst_2.jpg | File:Wall Street - New York Stock Exchange.jpg | Carlos Delgado | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File%3AWall_Street_-_New_York_Stock_Exchange.jpg
+capitol_0.jpg | File:US Capitol dome Jan 2006.jpg | Diliff | CC BY 2.5 | https://commons.wikimedia.org/wiki/File%3AUS_Capitol_dome_Jan_2006.jpg
+capitol_1.jpg | File:US Capitol east side.JPG | Martin Falbisoner | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File%3AUS_Capitol_east_side.JPG
+capitol_2.jpg | File:Capitol at Dusk 2.jpg | Martin Falbisoner | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File%3ACapitol_at_Dusk_2.jpg
