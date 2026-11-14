@@ -31,6 +31,7 @@ jobs:
             git rm -q "$f"
           done
       - name: Gemini TTS
+        continue-on-error: true
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
@@ -43,14 +44,16 @@ jobs:
             git rm -q "$f"
           done
       - name: Images (Wikimedia Commons, free licenses)
+        continue-on-error: true
         run: |
           shopt -s nullglob
           for f in inbox/*.img; do
             n=$(basename "$f" .img)
-            python tools/fetch_images.py "$f" "media/img/$n"
+            python tools/fetch_images.py "$f" "media/img/$n" || { echo "images failed for $n"; continue; }
             git rm -q "$f"
           done
       - name: Gemini images
+        continue-on-error: true
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
@@ -61,6 +64,7 @@ jobs:
             git rm -q "$f"
           done
       - name: Free images (Pollinations)
+        continue-on-error: true
         run: |
           shopt -s nullglob
           for f in inbox/*.pimg; do
@@ -69,6 +73,7 @@ jobs:
             git rm -q "$f"
           done
       - name: YouTube upload (Data API, free)
+        continue-on-error: true
         env:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
@@ -82,6 +87,7 @@ jobs:
             git rm -q "$f"
           done
       - name: Commit
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898900+github-actions[bot]@users.noreply.github.com"

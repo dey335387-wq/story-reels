@@ -2,12 +2,18 @@
 python fetch_images.py <in.img> <outdir>
 in.img: one search query per line, optionally "name|query". Saves <outdir>/<name>_<k>.jpg + credits.txt.
 Only files whose license is CC0/PD/CC-BY/CC-BY-SA are kept (credit recorded)."""
-import sys, os, json, re, urllib.request, urllib.parse
+import sys, os, json, re, urllib.request, urllib.parse, urllib.error
 src, outdir = sys.argv[1], sys.argv[2]
 os.makedirs(outdir, exist_ok=True)
 UA = {"User-Agent": "story-reels-bot/1.0 (github.com/dey335387-wq/story-reels)"}
 def get(url):
-    return urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=60).read()
+    import time
+    for a in range(5):  # Wikimedia rate-limits bursts (429): back off and retry
+        try:
+            return urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=60).read()
+        except urllib.error.HTTPError as e:
+            if e.code != 429 or a == 4: raise
+            time.sleep(5 * (a + 1))
 OK = re.compile(r"(cc0|public domain|pd|cc[- ]by(-sa)?[- ]?\d)", re.I)
 credits = []
 for n, line in enumerate(open(src, encoding="utf-8").read().splitlines()):
