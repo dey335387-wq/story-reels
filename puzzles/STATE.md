@@ -28,3 +28,5 @@
   Next (DAY 8, 19:25): LOGIC/SAFETY, new place (not fire, hostel, kitchen, exam, lift, bus stop).
 - 2026-11-13 pm | DAY 8, LOGIC/SAFETY | platform 3, new phone falls on the track, Maa calling; RULE: stepping on the track = biggest mistake; express in 2 min | A jump down + grab + climb / B don't, tell staff/RPF or call 139 → B | 51 s | IG https://www.instagram.com/reel/Dfr_OEUDRsv/ (21:19 IST — posted LATE, publish trigger fired 1h12m late + vidIQ/Metricool 502 outage) | FB Metricool 427121171 (21:25)
   Next (DAY 9): OPEN dilemma, new place (not fire, hostel, kitchen, exam, lift, bus stop, railway).
+- 2026-11-14 | DAY 9, OPEN DILEMMA | 6:55 PM office, ₹50 lakh order cancelled, only you know your best friend made the mistake (his mother in hospital); RULE: no name by the 7 PM meeting = whole team's bonus cut | A tell the truth, friend may lose job / B stay silent, 10 people lose bonus → open, asks for third option, best answer pinned | 55.5 s | IG https://www.instagram.com/reel/Dftncyqj5I6/ (12:31 IST) | FB Metricool 427784332 (12:35)
+  Next (DAY 10, 19:25): LOGIC/SAFETY, new place (not fire, hostel, kitchen, exam, lift, bus stop, railway, office).
