@@ -13,3 +13,4 @@
 - 2026-11-12: 5-story bulletin (rupee 94.04; Delhi AQI ~323; Abu Dhabi talks end with prisoner-swap agreement in principle; Spain first general strike in 14 yrs; Indonesia VP resigns), 67.3 s, YouTube API scheduled 18:30 IST: https://www.youtube.com/shorts/b3BUddWPvds
 - 2026-11-13: 5-story bulletin (Ukraine talks: Europe may join; Brent ~$96; London Iran-spying convictions; Dutch coalition crisis 38.5% tax; Taiwan 29 Chinese aircraft), 69.3 s, YouTube API scheduled 18:30 IST: https://www.youtube.com/shorts/VpLaPHp7imY
 - 2026-11-13: token-renew reminder sent to owner (refresh token from 08 Nov expires ~15 Nov; Testing mode).
+- 2026-11-14: 5-story bulletin (US FAA ground stop 4,700+ cancelled; Trump-Xi-Putin first trilateral next week in China; Hormuz 25 seafarers killed, traffic -65%; Nvidia CEO resigns; INS Chilka record 3,358 trainees), 63.2 s, YouTube API scheduled 18:30 IST: https://www.youtube.com/shorts/mS5cB33cPi8
