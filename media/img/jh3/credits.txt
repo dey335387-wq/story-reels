@@ -1,0 +1,15 @@
+geforce_0.jpg | File:ASUS NVIDIA GeForce 210 silent graphics card with HDMI.JPG | Joydeep | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File%3AASUS_NVIDIA_GeForce_210_silent_graphics_card_with_HDMI.JPG
+geforce_1.jpg | File:NVIDIA GeForce 7300 LE.JPG | Joydeep | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File%3ANVIDIA_GeForce_7300_LE.JPG
+geforce_2.jpg | File:Asus C501PS Nvidia Geforce 7600 graphics card 1.JPG | MKFI | Public domain | https://commons.wikimedia.org/wiki/File%3AAsus_C501PS_Nvidia_Geforce_7600_graphics_card_1.JPG
+datacenter_0.jpg | File:Duga-1 radar data center inside empty server racks 2018.jpg | Joël van der Loo | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File%3ADuga-1_radar_data_center_inside_empty_server_racks_2018.jpg
+datacenter_1.jpg | File:Racks Amravati Data Center.jpg | PiDatacenters | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File%3ARacks_Amravati_Data_Center.jpg
+datacenter_2.jpg | File:Datacenter Server Racks (22370909788).jpg | Carl Lender from Sunrise, USA | CC BY 2.0 | https://commons.wikimedia.org/wiki/File%3ADatacenter_Server_Racks_%2822370909788%29.jpg
+sega_0.jpg | File:Sega-Saturn-Console-Set-Mk2.jpg | Evan-Amos | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File%3ASega-Saturn-Console-Set-Mk2.jpg
+sega_1.jpg | File:Sega-Saturn-Console-Set-Mk1.png | Evan-Amos | Public domain | https://commons.wikimedia.org/wiki/File%3ASega-Saturn-Console-Set-Mk1.png
+sega_2.jpg | File:Sega-Saturn-JP-Mk2-Console-Set.png | Evan-Amos | Public domain | https://commons.wikimedia.org/wiki/File%3ASega-Saturn-JP-Mk2-Console-Set.png
+nasdaq_0.jpg | File:Nasdaq MarketSite (51494550508).jpg | ajay_suresh | CC BY 2.0 | https://commons.wikimedia.org/wiki/File%3ANasdaq_MarketSite_%2851494550508%29.jpg
+nasdaq_1.jpg | File:NASA Mars Perseverance on Nasdaq MarketSite (NHQ202102180118).jpg | NASA Headquarters / NASA/Emma Howells | Public domain | https://commons.wikimedia.org/wiki/File%3ANASA_Mars_Perseverance_on_Nasdaq_MarketSite_%28NHQ202102180118%29.jpg
+nasdaq_2.jpg | File:NASA Mars Perseverance on Nasdaq MarketSite (NHQ202102180117).jpg | NASA Headquarters / NASA/Emma Howells | Public domain | https://commons.wikimedia.org/wiki/File%3ANASA_Mars_Perseverance_on_Nasdaq_MarketSite_%28NHQ202102180117%29.jpg
+gamer_0.jpg | File:Gaming PC-Setup - Astaroth- The Completed System.jpg | Brian Wong | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File%3AGaming_PC-Setup_-_Astaroth-_The_Completed_System.jpg
+gamer_1.jpg | File:Gaming computers (1).jpg | Notdjey | CC BY 2.0 | https://commons.wikimedia.org/wiki/File%3AGaming_computers_%281%29.jpg
+gamer_2.jpg | File:Gaming computer with bat decals.jpg | JD Hancock | CC BY 2.0 | https://commons.wikimedia.org/wiki/File%3AGaming_computer_with_bat_decals.jpg
