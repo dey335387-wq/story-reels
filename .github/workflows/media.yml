@@ -38,7 +38,7 @@ jobs:
           for f in inbox/*.gtts; do
             n=$(basename "$f" .gtts)
             if [ -z "$GEMINI_API_KEY" ]; then echo "GEMINI_API_KEY secret missing"; exit 1; fi
-            python tools/gemini_tts.py "$f" "/tmp/$n.wav"
+            python tools/gemini_tts.py "$f" "/tmp/$n.wav" || { echo "TTS failed for $n, keeping it in inbox"; continue; }
             ffmpeg -loglevel error -y -i "/tmp/$n.wav" -b:a 160k "media/$n.mp3"
             git rm -q "$f"
           done
