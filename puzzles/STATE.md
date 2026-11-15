@@ -32,3 +32,5 @@
   Next (DAY 10, 19:25): LOGIC/SAFETY, new place (not fire, hostel, kitchen, exam, lift, bus stop, railway, office).
 - 2026-11-14 pm | DAY 10, LOGIC/SAFETY | 8 PM house terrace, friend gets electric shock fixing water-pump wire, hand stuck; RULE: 10 s, main switch downstairs | A pull him by hand / B switch off mains or push with dry wood → B (touching = you get shocked too), then call 112 | 52 s | IG https://www.instagram.com/reel/DfuW-_WnBgO/ (19:25 IST) | FB Metricool 427987787 (19:30)
   Next (DAY 11, 12:30): OPEN DILEMMA, new place (not fire, hostel, kitchen, exam, lift, bus stop, railway, office, terrace).
+- 2026-11-15 | DAY 11, OPEN DILEMMA | 11 PM night before best friend's wedding, unknown number sends photo of bride holding someone's hand (could be brother/old friend); RULE: baaraat 10 AM | A show friend now / B stay silent → open, asks third option | 50.2 s | IG https://www.instagram.com/reel/DfwMsKOldXr/ (12:33 IST) | FB Metricool 428637455 @12:35
+  Next (DAY 12, 19:25): LOGIC/SAFETY, new place (not fire, hostel, kitchen, exam, lift, bus stop, railway, office, terrace, wedding).
