@@ -34,3 +34,5 @@
   Next (DAY 11, 12:30): OPEN DILEMMA, new place (not fire, hostel, kitchen, exam, lift, bus stop, railway, office, terrace).
 - 2026-11-15 | DAY 11, OPEN DILEMMA | 11 PM night before best friend's wedding, unknown number sends photo of bride holding someone's hand (could be brother/old friend); RULE: baaraat 10 AM | A show friend now / B stay silent → open, asks third option | 50.2 s | IG https://www.instagram.com/reel/DfwMsKOldXr/ (12:33 IST) | FB Metricool 428637455 @12:35
   Next (DAY 12, 19:25): LOGIC/SAFETY, new place (not fire, hostel, kitchen, exam, lift, bus stop, railway, office, terrace, wedding).
+- 2026-11-15 pm | DAY 12, LOGIC/SAFETY | 2 AM bedroom, phone on charge swells + smokes next to pillow; RULE: 5 s | A press pillow on it / B switch off, move to tile/steel plate, open window → B (pillow burns, pressing battery worsens fire; never charge swollen phone; fire = 101) | 50.7 s | IG https://www.instagram.com/reel/Dfw71xGid-S/ (19:26 IST) | FB Metricool 428888375 @19:30
+  Next (DAY 13, 12:30): OPEN DILEMMA, new place (not fire, hostel, kitchen, exam, lift, bus stop, railway, office, terrace, wedding, bedroom-phone).
